@@ -1,0 +1,137 @@
+\documentclass[final, notable, nolof, nolot, 11pt, nocover]{fithesis3}
+
+%% The following section sets up the other used packages.
+\usepackage[main=english]{babel}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{amsmath}
+\usepackage{mathptmx}
+\usepackage{stfloats}
+\usepackage{textcase}
+\usepackage{esvect}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{subfigure}
+\usepackage{makeidx}
+\usepackage[textsize=small,colorinlistoftodos,disable]{todonotes}
+\usepackage{textcomp}
+\usepackage{chngcntr}
+
+%\usepackage{verbatim}
+%\usepackage{showframe}
+
+%% The following section sets up the metadata of the thesis.
+\thesissetup{
+    university    = mu,
+    faculty       = fi,
+    type          = r,
+    author        = Katarína Furmanová,
+    gender        = m,
+    advisor       = {prof. Jiří Sochor \\ \textbf{Co-Advisor:} assoc. prof. Barbora Kozlíková},
+    title         = {Visualization and Visual Analysis of Intermolecular Interactions of Proteins},
+    TeXtitle      = {Visualization and Visual Analysis of Intermolecular Interactions of Proteins},
+    keywords      = {protein, protein-protein interactions, visualization, cavity, protein void, tunnel, contact zone, CAVER Analyst},
+    TeXkeywords   = {protein, protein-protein interactions, visualization, cavity, protein void, tunnel, contact zone, CAVER Analyst},
+}
+
+
+\thesislong{abstract}{
+
+}
+
+\thesislong{thanks}{
+
+}
+
+%% The following section sets up the bibliography.
+\usepackage{csquotes}
+\usepackage[             
+  backend=biber,         
+  bibstyle=numeric,          
+  citestyle=numeric-comp, 
+  sorting=none,           
+  sortlocale=auto,
+%  maxnames=3,
+  firstinits=true         
+]{biblatex}               
+
+\renewbibmacro*{journal}{%
+  \iffieldundef{journaltitle}
+    {}
+    {\printtext[journaltitle]{%
+       \printfield[noformat]{journaltitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[noformat]{journalsubtitle}}}}
+       
+\renewbibmacro*{booktitle}{%
+  \iffieldundef{booktitle}
+    {}
+    {\printtext[booktitle]{%
+       \printfield[noformat]{booktitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[noformat]{booksubtitle}}}}
+       
+       
+\DeclareFieldFormat{titlecase}{\MakeSentenceCase{#1}}     
+\renewcommand*{\bibfont}{\small}
+\addbibresource{references.bib}
+
+% Defines usefull commands.
+\newcommand{\ie}{i.e.,~}
+\newcommand{\eg}{e.g.,~}
+
+% The following configures the algorithm package.
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\newcommand{\var}[1]{\textit{#1}}
+
+% The following configures the subfigure.
+\renewcommand{\thesubfigure}{(\Alph{subfigure})}
+
+% The following section sets up the index.
+\makeindex
+
+\pdfminorversion=4
+
+%\emergencystretch=1em
+
+\begin{document}
+
+%Makes the \part command work.
+\pdfstringdefDisableCommands{%
+	\let\MakeUppercase\relax
+}
+
+\listoftodos
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{OVERVIEW}
+\label{Sec:Overview}
+
+\input{includes/introduction.tex}
+\input{includes/star.tex}
+\input{includes/aims.tex}
+\input{includes/results.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{PUBLICATIONS}
+\renewcommand{\thesection}{\arabic{section}}
+\input{includes/publications.tex}
+
+\printbibliography[title=References]
+
+\end{document}
