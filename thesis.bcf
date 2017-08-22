@@ -2023,9 +2023,11 @@
   <!-- CITATION DATA -->
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">thesis.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
+    <bcf:citekey order="1">Strnad2014Thesis</bcf:citekey>
+    <bcf:citekey order="2">Strnad2014Thesis</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="none/global" type="entry" sortscheme="none" sortnamekeyscheme="global">
   <bcf:sorting>

@@ -1,27 +1,17 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
 \select@language {english}
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{I\hspace {1em}\MakeUppercase {OVERVIEW}}{1}{part.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}\bfseries Introduction}{3}{chapter.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}\bfseries Biochemical Definitions}{5}{chapter.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}\slshape Protein Structures}{5}{section.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}\slshape Properties of Proteins}{7}{section.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}\slshape Protein-Ligand Interactions}{7}{section.2.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}\slshape Protein-Protein Interactions}{8}{section.2.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}\bfseries State of the Art}{9}{chapter.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}\bfseries Aims of the Thesis}{11}{chapter.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}\bfseries Achieved Results}{13}{chapter.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{II\hspace {1em}\MakeUppercase {PUBLICATIONS}}{15}{part.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}\bfseries Author's Publications}{17}{chapter.6}
+\contentsline {chapter}{\numberline {1}\bfseries Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\slshape Biochemical Definitions}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}\rmfamily Protein Structures}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}\rmfamily Properties of Proteins}{3}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}\slshape Problem Formulation}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}\rmfamily Protein-Ligand Interactions}{5}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}\rmfamily Protein-Protein Interactions}{7}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}\rmfamily Summary}{8}{subsection.1.2.3}
+\contentsline {chapter}{\numberline {2}\bfseries State of the Art}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}\slshape Molecular Visualization}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}\slshape Detection of Protein Voids}{9}{section.2.2}
+\contentsline {subsubsection}{ Path analysis algorithms}{11}{section*.6}
+\contentsline {section}{\numberline {2.3}\slshape Protein-Protein Interactions}{11}{section.2.3}
+\contentsline {chapter}{\numberline {3}\bfseries Aims of the Thesis}{13}{chapter.3}
+\contentsline {chapter}{\numberline {4}\bfseries Achieved Results}{15}{chapter.4}
+\contentsline {chapter}{\numberline {5}\bfseries Author's Publications}{17}{chapter.5}

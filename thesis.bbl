@@ -1,0 +1,133 @@
+\begin{thebibliography}{10}
+
+\bibitem{brezovsky2013software}
+Jan Brezovsky, Eva Chovancova, Artur Gora, Antonin Pavelka, Lada Biedermannova,
+  and Jiri Damborsky.
+\newblock Software tools for identification, visualization and analysis of
+  protein tunnels and channels.
+\newblock {\em Biotechnology advances}, 31(1):38--49, 2013.
+
+\bibitem{caver30}
+Eva Chovancova, Antonin Pavelka, Petr Benes, Ondrej Strnad, Jan Brezovsky,
+  Barbora Kozlikova, Artur Gora, Vilem Sustr, Martin Klvana, Petr Medek, et~al.
+\newblock Caver 3.0: a tool for the analysis of transport pathways in dynamic
+  protein structures.
+\newblock {\em PLoS computational biology}, 8(10):e1002708, 2012.
+
+\bibitem{Coleman2009CHUNNEL}
+Ryan~G. Coleman and Kim~A. Sharp.
+\newblock Finding and characterizing tunnels in macromolecules with application
+  to ion channels and pores.
+\newblock {\em Biophysical Journal}, 96(2):632--645, 2009.
+
+\bibitem{hendlich1997ligsite}
+Manfred Hendlich, Friedrich Rippmann, and Gerhard Barnickel.
+\newblock Ligsite: automatic and efficient detection of potential small
+  molecule-binding sites in proteins.
+\newblock {\em Journal of Molecular Graphics and Modelling}, 15(6):359--363,
+  1997.
+
+\bibitem{Ho2008Hollow}
+Bosco~K. Ho and Franz Gruswitz.
+\newblock {HOLLOW}: Generating accurate representations of channel and interior
+  surfaces in molecular structures.
+\newblock {\em BMC Structural Biology}, 8(1):49, 2008.
+
+\bibitem{kleywegt1994detection}
+Gerard~J Kleywegt and T~ALWYN Jones.
+\newblock Detection, delineation, measurement and display of cavities in
+  macromolecular structures.
+\newblock {\em Acta Crystallographica Section D: Biological Crystallography},
+  50(2):178--185, 1994.
+
+\bibitem{krone2016visual}
+Michael Krone, Barbora Kozl{\'\i}kov{\'a}, Norbert Lindow, Marc Baaden, Daniel
+  Baum, Julius Parulek, H-C Hege, and Ivan Viola.
+\newblock Visual analysis of biomolecular cavities: State of the art.
+\newblock In {\em Computer Graphics Forum}, volume~35, pages 527--551. Wiley
+  Online Library, 2016.
+
+\bibitem{laskowski1995surfnet}
+Roman~A Laskowski.
+\newblock Surfnet: a program for visualizing molecular surfaces, cavities, and
+  intermolecular interactions.
+\newblock {\em Journal of molecular graphics}, 13(5):323--330, 1995.
+
+\bibitem{levitt1992pocket}
+David~G Levitt and Leonard~J Banaszak.
+\newblock Pocket: a computer graphies method for identifying and displaying
+  protein cavities and their surrounding amino acids.
+\newblock {\em Journal of molecular graphics}, 10(4):229--234, 1992.
+
+\bibitem{liang1998anatomy}
+Jie Liang, Clare Woodward, and Herbert Edelsbrunner.
+\newblock Anatomy of protein pockets and cavities: measurement of binding site
+  geometry and implications for ligand design.
+\newblock {\em Protein science}, 7(9):1884--1897, 1998.
+
+\bibitem{caver20}
+Petr Medek, Petr Bene{\v{s}}, Ji{\v{r}}{\'\i} Sochor, Vicent Vivanloc,
+  Jean-Christophe Hoelt, Coong~Binh Hong, Mathias Paulin, Jonas Spillmann,
+  M~Becker, M~Teschner, et~al.
+\newblock Computation of tunnels in protein molecules using delaunay
+  triangulation, 2007.
+
+\bibitem{Pellegrini2009PoreWalker}
+Marialuisa Pellegrini-Calace, Tim Maiwald, and Janet~M. Thornton.
+\newblock {PoreWalker}: A novel tool for the identification and
+  characterization of channels in transmembrane proteins from their
+  three-dimensional structure.
+\newblock {\em PLOS Computational Biology}, 5(7):e1000440, 2009.
+
+\bibitem{Petrek2007MOLE}
+Martin Pet{\v{r}}ek, Pavl{\'\i}na Ko{\v{s}}inov{\'a}, Jaroslav Ko{\v{c}}a, and
+  Michal Otyepka.
+\newblock {MOLE}: a voronoi diagram-based explorer of molecular channels,
+  pores, and tunnels.
+\newblock {\em Structure}, 15(11):1357--1363, 2007.
+
+\bibitem{Petrek2006Caver}
+Martin Pet{\v{r}}ek, Michal Otyepka, Pavel Ban{\'a}{\v{s}}, Pavl{\'\i}na
+  Ko{\v{s}}inov{\'a}, Jaroslav Ko{\v{c}}a, and Ji{\v{r}}{\'\i} Damborsk{\`y}.
+\newblock Caver: a new tool to explore routes from protein clefts, pockets and
+  cavities.
+\newblock {\em BMC bioinformatics}, 7(1):316, 2006.
+
+\bibitem{raunest2011dxtuber}
+Martin Raunest and Christian Kandt.
+\newblock dxtuber: detecting protein cavities, tunnels and clefts based on
+  protein and solvent dynamics.
+\newblock {\em Journal of Molecular Graphics and Modelling}, 29(7):895--905,
+  2011.
+
+\bibitem{Smart1996Hole}
+Oliver~S Smart, Joseph~G Neduvelil, Xiaonan Wang, BA~Wallace, and Mark~SP
+  Sansom.
+\newblock Hole: a program for the analysis of the pore dimensions of ion
+  channel structural models.
+\newblock {\em Journal of Molecular Graphics}, 14(6):354--360, 1996.
+
+\bibitem{Strnad2014Thesis}
+Ond{\v{r}}ej Strnad.
+\newblock {\em Algorithms for Detecting Pathways in Large Protein Structures
+  and Their Ensembles}.
+\newblock PhD thesis, Masaryk University, Faculty of Informatics, 2014.
+
+\bibitem{voss20103v}
+Neil~R Voss and Mark Gerstein.
+\newblock 3v: cavity, channel and cleft volume calculator and extractor.
+\newblock {\em Nucleic acids research}, 38(suppl\_2):W555--W562, 2010.
+
+\bibitem{Yaffe2008MolAxis}
+E.~Yaffe, D.~Fishelovitch, H.J. Wolfson, D.~Halperin, and R.~Nussinov.
+\newblock {MolAxis}: Efficient and accurate identification of channels in
+  macromolecules.
+\newblock {\em Proteins}, 73(1):72--86, 2008.
+
+\bibitem{yu2009roll}
+Jian Yu, Yong Zhou, Isao Tanaka, and Min Yao.
+\newblock Roll: a new algorithm for the detection of protein pockets and
+  cavities with a rolling probe sphere.
+\newblock {\em Bioinformatics}, 26(1):46--52, 2009.
+
+\end{thebibliography}

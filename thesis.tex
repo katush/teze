@@ -20,6 +20,7 @@
 \usepackage{textcomp}
 \usepackage{chngcntr}
 
+
 %\usepackage{verbatim}
 %\usepackage{showframe}
 
@@ -48,36 +49,37 @@
 
 %% The following section sets up the bibliography.
 \usepackage{csquotes}
-\usepackage[             
-  backend=biber,         
-  bibstyle=numeric,          
-  citestyle=numeric-comp, 
-  sorting=none,           
-  sortlocale=auto,
+%\usepackage[             
+%  backend=biber,         
+%  bibstyle=numeric,          
+%  citestyle=numeric-comp, 
+%  sorting=none,           
+%  sortlocale=auto,
 %  maxnames=3,
-  firstinits=true         
-]{biblatex}               
+%  firstinits=true         
+%]{biblatex}  
 
-\renewbibmacro*{journal}{%
-  \iffieldundef{journaltitle}
-    {}
-    {\printtext[journaltitle]{%
-       \printfield[noformat]{journaltitle}%
-       \setunit{\subtitlepunct}%
-       \printfield[noformat]{journalsubtitle}}}}
+
+%\renewbibmacro*{journal}{%
+%  \iffieldundef{journaltitle}
+%    {}
+%    {\printtext[journaltitle]{%
+%       \printfield[noformat]{journaltitle}%
+%       \setunit{\subtitlepunct}%
+%       \printfield[noformat]{journalsubtitle}}}}
        
-\renewbibmacro*{booktitle}{%
-  \iffieldundef{booktitle}
-    {}
-    {\printtext[booktitle]{%
-       \printfield[noformat]{booktitle}%
-       \setunit{\subtitlepunct}%
-       \printfield[noformat]{booksubtitle}}}}
+%\renewbibmacro*{booktitle}{%
+%  \iffieldundef{booktitle}
+%    {}
+%    {\printtext[booktitle]{%
+%       \printfield[noformat]{booktitle}%
+%       \setunit{\subtitlepunct}%
+%       \printfield[noformat]{booksubtitle}}}}
+%       
        
-       
-\DeclareFieldFormat{titlecase}{\MakeSentenceCase{#1}}     
-\renewcommand*{\bibfont}{\small}
-\addbibresource{references.bib}
+%\DeclareFieldFormat{titlecase}{\MakeSentenceCase{#1}}     
+%\renewcommand*{\bibfont}{\small}
+%\addbibresource{thesis.bib}
 
 % Defines usefull commands.
 \newcommand{\ie}{i.e.,~}
@@ -113,7 +115,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{OVERVIEW}
 \label{Sec:Overview}
 
 \input{includes/introduction.tex}
@@ -128,10 +129,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{PUBLICATIONS}
 \renewcommand{\thesection}{\arabic{section}}
 \input{includes/publications.tex}
 
-\printbibliography[title=References]
+%\printbibliography[title=References]
+\bibliography{thesis}{}
+\bibliographystyle{plain}        
+
 
 \end{document}
