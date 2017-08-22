@@ -27,6 +27,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}\slshape   Biochemical Definitions}{1}{section.1.1}}
 \newlabel{Sec:Chem}{{1.1}{1}{Biochemical Definitions}{section.1.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}\rmfamily   Protein Structures}{2}{subsection.1.1.1}}
+\newlabel{Sec:structures}{{1.1.1}{2}{Protein Structures}{subsection.1.1.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces a) Illustration of a basic amino acid structure. b) Amino acid residues connected into polypeptide chain. It can be noted, that the amino and carboxyl groups are missing atoms, which were released during the formation of peptide bonds as $H_2O$ molecules.}}{2}{figure.1.1}}
 \newlabel{Fig:aa}{{1.1}{2}{a) Illustration of a basic amino acid structure. b) Amino acid residues connected into polypeptide chain. It can be noted, that the amino and carboxyl groups are missing atoms, which were released during the formation of peptide bonds as $H_2O$ molecules}{figure.1.1}{}}
 \citation{Strnad2014Thesis}
@@ -43,14 +44,24 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Superposition of several possible conformations between two proteins. The set of green protein instances corresponds to one of the proteins in the interaction, the colored components represent the second protein in different conformations.}}{8}{figure.1.5}}
 \newlabel{Fig:problem}{{1.5}{8}{Superposition of several possible conformations between two proteins. The set of green protein instances corresponds to one of the proteins in the interaction, the colored components represent the second protein in different conformations}{figure.1.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}\rmfamily   Summary}{8}{subsection.1.2.3}}
-\citation{krone2016visual}
-\citation{Petrek2006Caver}
+\citation{dalton1808new}
+\citation{perkins2005history}
+\citation{dreiding1959einfache}
+\citation{Waals1873PhDThesis}
+\citation{corey1953molecular}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}\bfseries  State of the Art}{9}{chapter.2}}
 \@writefile{lof}{\addvspace {4\p@ }}
 \@writefile{lot}{\addvspace {4\p@ }}
 \newlabel{Sec:star}{{2}{9}{State of the Art}{chapter.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}\slshape   Molecular Visualization}{9}{section.2.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}\slshape   Detection of Protein Voids}{9}{section.2.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Hoffman's methane (Marsh-gas) representation.}}{9}{figure.2.1}}
+\newlabel{Fig:hoffman}{{2.1}{9}{Hoffman's methane (Marsh-gas) representation}{figure.2.1}{}}
+\citation{richardson1981anatomy}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Types of molecular representations in modern visualization tools: a) liquorice model b) ball-and-stick model c) space-filling model}}{10}{figure.2.2}}
+\newlabel{Fig:vis}{{2.2}{10}{Types of molecular representations in modern visualization tools: a) liquorice model b) ball-and-stick model c) space-filling model}{figure.2.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}\slshape   Detection of Protein Voids}{10}{section.2.2}}
+\citation{krone2016visual}
+\citation{Petrek2006Caver}
 \citation{Ho2008Hollow}
 \citation{voss20103v}
 \citation{levitt1992pocket}
@@ -63,54 +74,60 @@
 \citation{brezovsky2013software}
 \citation{caver20}
 \citation{caver20}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite  {brezovsky2013software}.}}{10}{figure.2.1}}
-\newlabel{Fig:rollingprobe}{{2.1}{10}{a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite {brezovsky2013software}}{figure.2.1}{}}
 \citation{Petrek2007MOLE}
 \citation{caver20}
 \citation{Yaffe2008MolAxis}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite  {brezovsky2013software}.}}{12}{figure.2.3}}
+\newlabel{Fig:rollingprobe}{{2.3}{12}{a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite {brezovsky2013software}}{figure.2.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite  {caver20}}}{12}{figure.2.4}}
+\newlabel{Fig:voronoi}{{2.4}{12}{Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite {caver20}}{figure.2.4}{}}
 \citation{caver30}
 \citation{Smart1996Hole}
 \citation{Coleman2009CHUNNEL}
 \citation{Pellegrini2009PoreWalker}
 \citation{liang1998anatomy}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite  {caver20}}}{11}{figure.2.2}}
-\newlabel{Fig:voronoi}{{2.2}{11}{Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite {caver20}}{figure.2.2}{}}
-\@writefile{toc}{\contentsline {subsubsection}{ Path analysis algorithms}{11}{section*.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}\slshape   Protein-Protein Interactions}{11}{section.2.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}\bfseries  Aims of the Thesis}{13}{chapter.3}}
+\@writefile{toc}{\contentsline {subsubsection}{ Path analysis algorithms}{13}{section*.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}\slshape   Protein-Protein Interactions}{13}{section.2.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}\bfseries  Aims of the Thesis}{15}{chapter.3}}
 \@writefile{lof}{\addvspace {4\p@ }}
 \@writefile{lot}{\addvspace {4\p@ }}
-\newlabel{Sec:Aims}{{3}{13}{Aims of the Thesis}{chapter.3}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}\bfseries  Achieved Results}{15}{chapter.4}}
+\newlabel{Sec:Aims}{{3}{15}{Aims of the Thesis}{chapter.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}\bfseries  Achieved Results}{17}{chapter.4}}
 \@writefile{lof}{\addvspace {4\p@ }}
 \@writefile{lot}{\addvspace {4\p@ }}
-\newlabel{Sec:Results}{{4}{15}{Achieved Results}{chapter.4}{}}
+\newlabel{Sec:Results}{{4}{17}{Achieved Results}{chapter.4}{}}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}\bfseries  Author's Publications}{17}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}\bfseries  Author's Publications}{19}{chapter.5}}
 \@writefile{lof}{\addvspace {4\p@ }}
 \@writefile{lot}{\addvspace {4\p@ }}
-\newlabel{Sec:Publications}{{5}{17}{Author's Publications}{chapter.5}{}}
+\newlabel{Sec:Publications}{{5}{19}{Author's Publications}{chapter.5}{}}
 \bibcite{brezovsky2013software}{1}
 \bibcite{caver30}{2}
 \bibcite{Coleman2009CHUNNEL}{3}
-\bibcite{hendlich1997ligsite}{4}
-\bibcite{Ho2008Hollow}{5}
-\bibcite{kleywegt1994detection}{6}
-\bibcite{krone2016visual}{7}
-\bibcite{laskowski1995surfnet}{8}
-\bibcite{levitt1992pocket}{9}
-\bibcite{liang1998anatomy}{10}
-\bibcite{caver20}{11}
-\bibcite{Pellegrini2009PoreWalker}{12}
-\bibcite{Petrek2007MOLE}{13}
-\bibcite{Petrek2006Caver}{14}
-\bibcite{raunest2011dxtuber}{15}
-\bibcite{Smart1996Hole}{16}
-\bibcite{Strnad2014Thesis}{17}
-\bibcite{voss20103v}{18}
-\bibcite{Yaffe2008MolAxis}{19}
-\bibcite{yu2009roll}{20}
+\bibcite{corey1953molecular}{4}
+\bibcite{dalton1808new}{5}
+\bibcite{dreiding1959einfache}{6}
+\bibcite{hendlich1997ligsite}{7}
+\bibcite{Ho2008Hollow}{8}
+\bibcite{kleywegt1994detection}{9}
+\bibcite{krone2016visual}{10}
+\bibcite{laskowski1995surfnet}{11}
+\bibcite{levitt1992pocket}{12}
+\bibcite{liang1998anatomy}{13}
+\bibcite{caver20}{14}
+\bibcite{Pellegrini2009PoreWalker}{15}
+\bibcite{perkins2005history}{16}
+\bibcite{Petrek2007MOLE}{17}
+\bibcite{Petrek2006Caver}{18}
+\bibcite{raunest2011dxtuber}{19}
+\bibcite{richardson1981anatomy}{20}
+\bibcite{Smart1996Hole}{21}
+\bibcite{Strnad2014Thesis}{22}
+\bibcite{voss20103v}{23}
+\bibcite{Waals1873PhDThesis}{24}
+\bibcite{Yaffe2008MolAxis}{25}
+\bibcite{yu2009roll}{26}
 \bibstyle{plain}
 \@ifundefined{unitindent}{\newdimen\unitindent\let \@indentset\relax }{}
 \global \unitindent=27.37494pt\relax\@indentset\relax
-\gdef \thesis@pages {21}
+\gdef \thesis@pages {23}

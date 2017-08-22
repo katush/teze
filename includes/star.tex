@@ -6,9 +6,36 @@
 In this chapter we will present the state of the art work present in bioinformatical literature with regards to the visualization and analysis of intermolecular interactions of proteins. We will start with overview of existing molecular visualization techniques, then continue with the work related to protein-ligand interactions, where literature covers a substantial amount of diverse research. Then we will continue with analysis of protein-protein interactions. This field is however only sparsely covered in literature.
 
 \section{Molecular Visualization}
-styles - cartoon, string, balls and sticks ....
--surfaces
--tools (py mol, analyst)
+\begin{wrapfigure}{r}{0.3\textwidth} 
+\vspace{-27pt}
+  \begin{center}
+  \includegraphics[width=0.8\linewidth]{pictures/04_hoffman.jpg} 
+  \caption{Hoffman's methane (Marsh-gas) representation.}
+  \label{Fig:hoffman}  
+\end{center}
+  \vspace{-15pt}
+\end{wrapfigure}
+
+We can say that history of molecular visualization dates back to the 19th century. In 1808 John Dalton published his atomic theory~\cite{dalton1808new}, where he represented atoms and simple molecules with circular shapes. Couple of decades later, around 1860, August Wilhelm von Hoffmann started using first 3D models of molecules in his lectures at Royal Institution of Great Britain~\cite{perkins2005history} -- see Figure \ref{Fig:hoffman}. This type of molecular representation is called \textit{ball-and-stick} model, where balls represent atoms and sticks represent bonds between them. With couple of modifications this representation is commonly used also nowadays (Figure \ref{Fig:vis} b)). 
+
+Over the years other derivations of ball-and-stick model emerged. In 1959 André Dreiding introduced molecular modelling kit using \textit{stick-only} model~\cite{dreiding1959einfache}. Here the atoms were not represented by balls, but merely as connection points between sticks. Nowadays this model is called also \textit{liquorice} or \textit{Dreiding's model} (Figure \ref{Fig:vis} a)). The colouring of the sticks is often used to indicate atoms or their properties.
+
+Although several researchers, including Dalton and Hoffman, claimed that different atoms have different radii, it wasn't until 1873 that the sizes of atoms were experimentally derived by Johannes Diderik van der Waals~\cite{Waals1873PhDThesis}. In later years this discovery led to so called \textit{space-filling} molecular representations, also called \textit{CPK models} after chemists Robert Corey, Linus Pauling, and Walter Koltun \cite{corey1953molecular}. In this representation, full "space-filling" sizes of atoms are used, which provides the overview of molecular surface (Figure \ref{Fig:vis} c)).
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\linewidth]{pictures/vis.pdf} 
+  \caption{Types of molecular representations in modern visualization tools: a) liquorice model b) ball-and-stick model c) space-filling model}
+  \label{Fig:vis}  
+\end{figure} 
+
+The afore mentioned representations of molecules provide detail information about structure of atoms in a molecule. However, for proteins, which can consist of thousands of atoms, this representations can be too cluttered. Therefore, several schematic visualizations were developed. 
+
+In 1981 Jane S. Richardson published a consistent hand-drawn illustrations of all then known protein structures \cite{richardson1981anatomy}. These schematic representations, known today as \textit{ribbon diagrams}, provide intuitive overview of protein secondary structures (see section \ref{Sec:structures}) as well as overall arrangement of the protein. Although they were originally hand drawn, they are nowadays part of every molecular visualization software.
+
+Another, yet more simple representation of proteins is called \textit{alpha trace}. It can be derived from the ribbon diagrams stripped from all the secondary structures -- it depicted only the chain of $\alpha$-carbons.
+
+Surfaces, tools (py mol, analyst)
 
 \section{Detection of Protein Voids}
 As we mentioned before, the active site -- the reactive area of the protein is often buried deeply inside of the protein structure and accessible only via protein tunnels. Therefore extraction and analysis of these tunnels is vital for the study of protein-ligand binding. There are several methods for extracting the shape of the protein voids in general, as well as numerous ones focusing on tunnels specifically. The algorithms can be classified into several categories, depending on the approach they use: grid-based, probe-based, surface-based, Voronoi-based, ligand based and path analysis. Most of the algorithms combine several approaches, in order to achieve better results. Moreover, we can differentiate  between algorithms applicable only for static structures and algorithms taking into account molecular dynamics.
@@ -33,12 +60,12 @@ Accuracy of grid-based algorithms strongly depends on the resolution of the voxe
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\linewidth]{pictures/voronoi.pdf} 
+  \includegraphics[width=0.6\linewidth]{pictures/voronoi.pdf} 
   \caption{Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite{caver20}}
   \label{Fig:voronoi}  
 \end{figure} 
 
-This principle is used in MOLE~\cite{Petrek2007MOLE} and by Medek et al.~\cite{caver20}. MolAxis \cite{Yaffe2008MolAxis} increases the precision of this algorithm by approximating atom radii, which previous approaches omitted.
+This principle is used in MOLE~\cite{Petrek2007MOLE} and by Medek et al.~\cite{caver20}. MolAxis~\cite{Yaffe2008MolAxis} increases the precision of this algorithm by approximating atom radii, which previous approaches omitted.
 
 While all these approaches offer a solution for static molecules, CAVER 3.0~\cite{caver30} extends them and allows for detection of tunnels taking into account the movement of the protein. It computes tunnel paths for each time frame of MD simulation. Than the corresponding paths are clustered. Thus it is possible to track the evolution of the tunnels in time.
 
@@ -53,6 +80,6 @@ POREWALKER \cite{Pellegrini2009PoreWalker}
 
 CAST \cite{liang1998anatomy}
 
-
+ligand md simulations
 
 \section{Protein-Protein Interactions}

@@ -20,6 +20,21 @@ Ryan~G. Coleman and Kim~A. Sharp.
   to ion channels and pores.
 \newblock {\em Biophysical Journal}, 96(2):632--645, 2009.
 
+\bibitem{corey1953molecular}
+Robert~B Corey and Linus Pauling.
+\newblock Molecular models of amino acids, peptides, and proteins.
+\newblock {\em Review of Scientific Instruments}, 24(8):621--627, 1953.
+
+\bibitem{dalton1808new}
+John Dalton.
+\newblock {\em A new system of chemical philosophy}, volume~1.
+\newblock Cambridge University Press, 1808.
+
+\bibitem{dreiding1959einfache}
+Andre~S Dreiding.
+\newblock Einfache molekularmodelle.
+\newblock {\em Helvetica Chimica Acta}, 42(4):1339--1344, 1959.
+
 \bibitem{hendlich1997ligsite}
 Manfred Hendlich, Friedrich Rippmann, and Gerhard Barnickel.
 \newblock Ligsite: automatic and efficient detection of potential small
@@ -79,6 +94,11 @@ Marialuisa Pellegrini-Calace, Tim Maiwald, and Janet~M. Thornton.
   three-dimensional structure.
 \newblock {\em PLOS Computational Biology}, 5(7):e1000440, 2009.
 
+\bibitem{perkins2005history}
+James~A Perkins.
+\newblock A history of molecular representation. part one: 1800 to the 1960s.
+\newblock {\em J Biocommun}, 31(1):1, 2005.
+
 \bibitem{Petrek2007MOLE}
 Martin Pet{\v{r}}ek, Pavl{\'\i}na Ko{\v{s}}inov{\'a}, Jaroslav Ko{\v{c}}a, and
   Michal Otyepka.
@@ -100,6 +120,11 @@ Martin Raunest and Christian Kandt.
 \newblock {\em Journal of Molecular Graphics and Modelling}, 29(7):895--905,
   2011.
 
+\bibitem{richardson1981anatomy}
+Jane~S Richardson.
+\newblock The anatomy and taxonomy of protein structure.
+\newblock {\em Advances in protein chemistry}, 34:167--339, 1981.
+
 \bibitem{Smart1996Hole}
 Oliver~S Smart, Joseph~G Neduvelil, Xiaonan Wang, BA~Wallace, and Mark~SP
   Sansom.
@@ -117,6 +142,11 @@ Ond{\v{r}}ej Strnad.
 Neil~R Voss and Mark Gerstein.
 \newblock 3v: cavity, channel and cleft volume calculator and extractor.
 \newblock {\em Nucleic acids research}, 38(suppl\_2):W555--W562, 2010.
+
+\bibitem{Waals1873PhDThesis}
+Johannes Diderik van~der Waals.
+\newblock {\em Over de Continuiteit van den Gas--en Vloeistoftoestand}.
+\newblock PhD thesis, 1873.
 
 \bibitem{Yaffe2008MolAxis}
 E.~Yaffe, D.~Fishelovitch, H.J. Wolfson, D.~Halperin, and R.~Nussinov.
