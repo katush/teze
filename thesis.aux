@@ -44,6 +44,8 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Superposition of several possible conformations between two proteins. The set of green protein instances corresponds to one of the proteins in the interaction, the colored components represent the second protein in different conformations.}}{8}{figure.1.5}}
 \newlabel{Fig:problem}{{1.5}{8}{Superposition of several possible conformations between two proteins. The set of green protein instances corresponds to one of the proteins in the interaction, the colored components represent the second protein in different conformations}{figure.1.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2.3}\rmfamily   Summary}{8}{subsection.1.2.3}}
+\citation{perkins2005history}
+\citation{perkins2005history}
 \citation{dalton1808new}
 \citation{perkins2005history}
 \citation{dreiding1959einfache}
@@ -54,13 +56,46 @@
 \@writefile{lot}{\addvspace {4\p@ }}
 \newlabel{Sec:star}{{2}{9}{State of the Art}{chapter.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}\slshape   Molecular Visualization}{9}{section.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Hoffman's methane (Marsh-gas) representation.}}{9}{figure.2.1}}
-\newlabel{Fig:hoffman}{{2.1}{9}{Hoffman's methane (Marsh-gas) representation}{figure.2.1}{}}
-\citation{richardson1981anatomy}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.1}\rmfamily   Atomistic and Bond-Centric Models}{9}{subsection.2.1.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Hoffman's methane (Marsh-gas) representation \cite  {perkins2005history}.}}{9}{figure.2.1}}
+\newlabel{Fig:hoffman}{{2.1}{9}{Hoffman's methane (Marsh-gas) representation \cite {perkins2005history}}{figure.2.1}{}}
+\citation{gumhold2003splatting}
+\citation{lampe2007two}
+\citation{le2014illustrative}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces Types of molecular representations in modern visualization tools: a) liquorice model b) ball-and-stick model c) space-filling model}}{10}{figure.2.2}}
 \newlabel{Fig:vis}{{2.2}{10}{Types of molecular representations in modern visualization tools: a) liquorice model b) ball-and-stick model c) space-filling model}{figure.2.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}\slshape   Detection of Protein Voids}{10}{section.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.2}\rmfamily   Protein Architecture}{10}{subsection.2.1.2}}
+\citation{richardson1981anatomy}
+\citation{richards1977areas}
+\citation{lee1971interpretation}
+\citation{kozlikova2015visualization}
+\citation{kozlikova2015visualization}
+\citation{richards1977areas}
+\citation{totrov1996contour}
+\citation{lindow2010accelerated}
+\citation{6094043}
+\citation{hermosilla2017interactive}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Types of molecular representations in modern visualization tools: a) alpha trace b) ribbon diagrams}}{11}{figure.2.3}}
+\newlabel{Fig:vis2}{{2.3}{11}{Types of molecular representations in modern visualization tools: a) alpha trace b) ribbon diagrams}{figure.2.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1.3}\rmfamily   Surface Representations}{11}{subsection.2.1.3}}
+\citation{edelsbrunner1999deformable}
+\citation{lindow2010accelerated}
+\citation{Yan2017}
+\citation{lindow2014ligand}
+\citation{blinn1982generalization}
+\citation{krone2012fast}
+\citation{kozlikova2015visualization}
+\citation{kozlikova2015visualization}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Schematic representation of molecular surfaces: vdW surface (blue), SES (red) and SAS (yellow). The SES and SAS are defined a probe (grey) rolling over vdW surface. Image taken from \cite  {kozlikova2015visualization}.}}{12}{figure.2.4}}
+\newlabel{Fig:surface}{{2.4}{12}{Schematic representation of molecular surfaces: vdW surface (blue), SES (red) and SAS (yellow). The SES and SAS are defined a probe (grey) rolling over vdW surface. Image taken from \cite {kozlikova2015visualization}}{figure.2.4}{}}
+\citation{kozlikova2015visualization}
+\citation{kozlikova2015visualization}
+\citation{patane2015state}
 \citation{krone2016visual}
+\citation{simoesgeometric}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces Comparison between different molecular surfaces of the protein isomerase: a) vdW surface b) SES with probe radius 1:4 \IeC {\r A} c) LES for equilenine d) MSSwith shrink factor 0.35 e) Gaussian surface with standard deviation equal to the atom radius. Image taken from \cite  {kozlikova2015visualization}.}}{13}{figure.2.5}}
+\newlabel{Fig:surface2}{{2.5}{13}{Comparison between different molecular surfaces of the protein isomerase: a) vdW surface b) SES with probe radius 1:4 Å c) LES for equilenine d) MSSwith shrink factor 0.35 e) Gaussian surface with standard deviation equal to the atom radius. Image taken from \cite {kozlikova2015visualization}}{figure.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}\slshape   Detection of Protein Voids}{13}{section.2.2}}
 \citation{Petrek2006Caver}
 \citation{Ho2008Hollow}
 \citation{voss20103v}
@@ -72,62 +107,79 @@
 \citation{raunest2011dxtuber}
 \citation{brezovsky2013software}
 \citation{brezovsky2013software}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite  {brezovsky2013software}.}}{14}{figure.2.6}}
+\newlabel{Fig:rollingprobe}{{2.6}{14}{a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite {brezovsky2013software}}{figure.2.6}{}}
 \citation{caver20}
 \citation{caver20}
 \citation{Petrek2007MOLE}
 \citation{caver20}
 \citation{Yaffe2008MolAxis}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite  {brezovsky2013software}.}}{12}{figure.2.3}}
-\newlabel{Fig:rollingprobe}{{2.3}{12}{a) Rolling probe method. The surface and inner voids of the protein are defined by the placement of probes (large for surrounding and small for voids) in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (dark blue), while undetected internal volumes are white. c) HOLLOW represents identified voids using the dummy atoms fitting these voids (red spheres). d) 3V represents detected internal void by voxels (red squares). Image adapted from \cite {brezovsky2013software}}{figure.2.3}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite  {caver20}}}{12}{figure.2.4}}
-\newlabel{Fig:voronoi}{{2.4}{12}{Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite {caver20}}{figure.2.4}{}}
 \citation{caver30}
 \citation{Smart1996Hole}
 \citation{Coleman2009CHUNNEL}
 \citation{Pellegrini2009PoreWalker}
 \citation{liang1998anatomy}
-\@writefile{toc}{\contentsline {subsubsection}{ Path analysis algorithms}{13}{section*.6}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}\slshape   Protein-Protein Interactions}{13}{section.2.3}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}\bfseries  Aims of the Thesis}{15}{chapter.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite  {caver20}}}{15}{figure.2.7}}
+\newlabel{Fig:voronoi}{{2.7}{15}{Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from \cite {caver20}}{figure.2.7}{}}
+\@writefile{toc}{\contentsline {subsubsection}{ Path analysis algorithms}{15}{section*.6}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}\slshape   Protein-Protein Interactions}{15}{section.2.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}\bfseries  Aims of the Thesis}{17}{chapter.3}}
 \@writefile{lof}{\addvspace {4\p@ }}
 \@writefile{lot}{\addvspace {4\p@ }}
-\newlabel{Sec:Aims}{{3}{15}{Aims of the Thesis}{chapter.3}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}\bfseries  Achieved Results}{17}{chapter.4}}
+\newlabel{Sec:Aims}{{3}{17}{Aims of the Thesis}{chapter.3}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}\bfseries  Achieved Results}{19}{chapter.4}}
 \@writefile{lof}{\addvspace {4\p@ }}
 \@writefile{lot}{\addvspace {4\p@ }}
-\newlabel{Sec:Results}{{4}{17}{Achieved Results}{chapter.4}{}}
+\newlabel{Sec:Results}{{4}{19}{Achieved Results}{chapter.4}{}}
 \bibdata{thesis}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}\bfseries  Author's Publications}{19}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}\bfseries  Author's Publications}{21}{chapter.5}}
 \@writefile{lof}{\addvspace {4\p@ }}
 \@writefile{lot}{\addvspace {4\p@ }}
-\newlabel{Sec:Publications}{{5}{19}{Author's Publications}{chapter.5}{}}
-\bibcite{brezovsky2013software}{1}
-\bibcite{caver30}{2}
-\bibcite{Coleman2009CHUNNEL}{3}
-\bibcite{corey1953molecular}{4}
-\bibcite{dalton1808new}{5}
-\bibcite{dreiding1959einfache}{6}
-\bibcite{hendlich1997ligsite}{7}
-\bibcite{Ho2008Hollow}{8}
-\bibcite{kleywegt1994detection}{9}
-\bibcite{krone2016visual}{10}
-\bibcite{laskowski1995surfnet}{11}
-\bibcite{levitt1992pocket}{12}
-\bibcite{liang1998anatomy}{13}
-\bibcite{caver20}{14}
-\bibcite{Pellegrini2009PoreWalker}{15}
-\bibcite{perkins2005history}{16}
-\bibcite{Petrek2007MOLE}{17}
-\bibcite{Petrek2006Caver}{18}
-\bibcite{raunest2011dxtuber}{19}
-\bibcite{richardson1981anatomy}{20}
-\bibcite{Smart1996Hole}{21}
-\bibcite{Strnad2014Thesis}{22}
-\bibcite{voss20103v}{23}
-\bibcite{Waals1873PhDThesis}{24}
-\bibcite{Yaffe2008MolAxis}{25}
-\bibcite{yu2009roll}{26}
+\newlabel{Sec:Publications}{{5}{21}{Author's Publications}{chapter.5}{}}
+\bibcite{blinn1982generalization}{1}
+\bibcite{brezovsky2013software}{2}
+\bibcite{caver30}{3}
+\bibcite{Coleman2009CHUNNEL}{4}
+\bibcite{corey1953molecular}{5}
+\bibcite{dalton1808new}{6}
+\bibcite{dreiding1959einfache}{7}
+\bibcite{edelsbrunner1999deformable}{8}
+\bibcite{gumhold2003splatting}{9}
+\bibcite{hendlich1997ligsite}{10}
+\bibcite{hermosilla2017interactive}{11}
+\bibcite{Ho2008Hollow}{12}
+\bibcite{kleywegt1994detection}{13}
+\bibcite{kozlikova2015visualization}{14}
+\bibcite{6094043}{15}
+\bibcite{krone2016visual}{16}
+\bibcite{krone2012fast}{17}
+\bibcite{lampe2007two}{18}
+\bibcite{laskowski1995surfnet}{19}
+\bibcite{le2014illustrative}{20}
+\bibcite{lee1971interpretation}{21}
+\bibcite{levitt1992pocket}{22}
+\bibcite{liang1998anatomy}{23}
+\bibcite{lindow2014ligand}{24}
+\bibcite{lindow2010accelerated}{25}
+\bibcite{caver20}{26}
+\bibcite{patane2015state}{27}
+\bibcite{Pellegrini2009PoreWalker}{28}
+\bibcite{perkins2005history}{29}
+\bibcite{Petrek2007MOLE}{30}
+\bibcite{Petrek2006Caver}{31}
+\bibcite{raunest2011dxtuber}{32}
+\bibcite{richards1977areas}{33}
+\bibcite{richardson1981anatomy}{34}
+\bibcite{simoesgeometric}{35}
+\bibcite{Smart1996Hole}{36}
+\bibcite{Strnad2014Thesis}{37}
+\bibcite{totrov1996contour}{38}
+\bibcite{voss20103v}{39}
+\bibcite{Waals1873PhDThesis}{40}
+\bibcite{Yaffe2008MolAxis}{41}
+\bibcite{Yan2017}{42}
+\bibcite{yu2009roll}{43}
 \bibstyle{plain}
 \@ifundefined{unitindent}{\newdimen\unitindent\let \@indentset\relax }{}
 \global \unitindent=27.37494pt\relax\@indentset\relax
-\gdef \thesis@pages {23}
+\gdef \thesis@pages {27}

@@ -6,11 +6,12 @@
 In this chapter we will present the state of the art work present in bioinformatical literature with regards to the visualization and analysis of intermolecular interactions of proteins. We will start with overview of existing molecular visualization techniques, then continue with the work related to protein-ligand interactions, where literature covers a substantial amount of diverse research. Then we will continue with analysis of protein-protein interactions. This field is however only sparsely covered in literature.
 
 \section{Molecular Visualization}
+\subsection{Atomistic and Bond-Centric Models}
 \begin{wrapfigure}{r}{0.3\textwidth} 
 \vspace{-27pt}
   \begin{center}
-  \includegraphics[width=0.8\linewidth]{pictures/04_hoffman.jpg} 
-  \caption{Hoffman's methane (Marsh-gas) representation.}
+  \includegraphics[width=0.9\linewidth]{pictures/04_hoffman.jpg} 
+  \caption{Hoffman's methane (Marsh-gas) representation \cite{perkins2005history}.}
   \label{Fig:hoffman}  
 \end{center}
   \vspace{-15pt}
@@ -20,27 +21,85 @@ We can say that history of molecular visualization dates back to the 19th centur
 
 Over the years other derivations of ball-and-stick model emerged. In 1959 André Dreiding introduced molecular modelling kit using \textit{stick-only} model~\cite{dreiding1959einfache}. Here the atoms were not represented by balls, but merely as connection points between sticks. Nowadays this model is called also \textit{liquorice} or \textit{Dreiding's model} (Figure \ref{Fig:vis} a)). The colouring of the sticks is often used to indicate atoms or their properties.
 
-Although several researchers, including Dalton and Hoffman, claimed that different atoms have different radii, it wasn't until 1873 that the sizes of atoms were experimentally derived by Johannes Diderik van der Waals~\cite{Waals1873PhDThesis}. In later years this discovery led to so called \textit{space-filling} molecular representations, also called \textit{CPK models} after chemists Robert Corey, Linus Pauling, and Walter Koltun \cite{corey1953molecular}. In this representation, full "space-filling" sizes of atoms are used, which provides the overview of molecular surface (Figure \ref{Fig:vis} c)).
+Although several researchers, including Dalton and Hoffman, claimed that different atoms have different radii, it wasn't until 1873 that the sizes of atoms were experimentally derived by Johannes Diderik van der Waals~\cite{Waals1873PhDThesis}. In later years this discovery led to so called \textit{space-filling} molecular representations, also called \textit{callote} or \textit{CPK models} after chemists Robert Corey, Linus Pauling, and Walter Koltun \cite{corey1953molecular}. In this representation, full "space-filling" sizes of atoms are used, which provides the overview of molecular surface (Figure \ref{Fig:vis} c)).
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\linewidth]{pictures/vis.pdf} 
+  \includegraphics[width=\linewidth]{pictures/vis.pdf} 
   \caption{Types of molecular representations in modern visualization tools: a) liquorice model b) ball-and-stick model c) space-filling model}
   \label{Fig:vis}  
 \end{figure} 
 
-The afore mentioned representations of molecules provide detail information about structure of atoms in a molecule. However, for proteins, which can consist of thousands of atoms, this representations can be too cluttered. Therefore, several schematic visualizations were developed. 
+Atom and bond based representations of molecules can be decomposed into primitive shapes such as spheres and cylinders, which makes them suitable for GPU-based ray casting. Most of the state of the art rendering techniques stem from glyph ray casting introduce by Gumhold et al. \cite{gumhold2003splatting}, however many performance speedups focusing on rendering of large dynamic molecular structures exist. Since these techniques are focusing on large data samples, they often utilize level of detail (LOD) strategies. Example of this can be the two-level approach of Lampe et al. \cite{lampe2007two} where residues are each residue is represented by one vertex and the atoms in the residues are generated on-the-fly on the GPU. Another approach is used by Le Muzic et al. \cite{le2014illustrative}, where atom positions are stored in a texture and reconstructed using tessellation and geometry shaders.
 
-In 1981 Jane S. Richardson published a consistent hand-drawn illustrations of all then known protein structures \cite{richardson1981anatomy}. These schematic representations, known today as \textit{ribbon diagrams}, provide intuitive overview of protein secondary structures (see section \ref{Sec:structures}) as well as overall arrangement of the protein. Although they were originally hand drawn, they are nowadays part of every molecular visualization software.
+\subsection{Protein Architecture}
+The afore mentioned representations of molecules provide detail information about arrangement of atoms in a molecule. However, for proteins, which can consist of thousands of atoms, this representations can be too cluttered. Therefore, several schematic visualizations were developed.
 
-Another, yet more simple representation of proteins is called \textit{alpha trace}. It can be derived from the ribbon diagrams stripped from all the secondary structures -- it depicted only the chain of $\alpha$-carbons.
+One of the simplest representations of protein structure is called \textit{alpha trace}. It depicts only the backbone of the protein, as it is derived from the positions of $\alpha$-carbons (Figure \ref{Fig:vis2} a)). This representation provides coarse overview of tertiary and quaternary structure of the protein -- spatial arrangement of the polypeptide chains. However, it can be difficult to identify secondary structures from the alpha trace.
 
-Surfaces, tools (py mol, analyst)
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{pictures/representations.pdf} 
+  \caption{Types of molecular representations in modern visualization tools: a) alpha trace b) ribbon diagrams}
+  \label{Fig:vis2}  
+\end{figure} 
+
+In 1981 Jane S. Richardson published \textit{cartoon} illustrations of all then known protein structures \cite{richardson1981anatomy}. In these schematic representations, known today as \textit{ribbon diagrams}, she used consistent and intuitive illustrations of secondary structures to demarcate their position along protein backbone. Although ribbon diagrams were originally hand drawn, they are nowadays part of every molecular visualization software (Figure \ref{Fig:vis2} b)).
+
+\subsection{Surface Representations}
+These representations communicate the internal structure of the protein. However in many cases the focus of interest is on the surface of the protein, since the surface is the part of protein that is in contact with outer environment. In is therefore important for biochemists to identify the boundaries of the proteins that are accessible to ligands or interacting with other proteins.
+
+We have already mentioned one type of surface defined by atom spheres of van der Walls radii and therefore called \textit{van der Waals (vdW) surface} \cite{richards1977areas} -- Figure~\ref{Fig:surface} (blue). This surface indicates the precise molecular volume.
+
+Another type of surface -- \textit{solvent accesible surface (SAS)} was developed to show the regions of molecule accesible by a solvent molecules \cite{lee1971interpretation}. Here, the solvent molecule is approximated by a spherical probe, which rolls rolls over the vdW surface. The center of the probe than defines the SAS surface -- Figure~\ref{Fig:surface} (yellow). In other words, solvent accesible surface is equal to a vdW surface inflated by the radius of probe.
+
+\begin{figure}[htb]
+  \begin{center}
+  \includegraphics[width=0.5\linewidth]{pictures/surface.pdf} 
+  \caption{Schematic representation of molecular surfaces: vdW surface (blue), SES (red) and SAS (yellow). The SES and SAS are defined a probe (grey) rolling over vdW surface. Image taken from \cite{kozlikova2015visualization}.}
+  \label{Fig:surface}  
+\end{center}
+\end{figure}
+
+
+\textit{Solvent excluded surface (SES)} \cite{richards1977areas} is defined in similar manner to SAS. However, instead of the center of the probe, its outer shell defines the surface -- Figure~\ref{Fig:surface} (red). It was the first smooth surface defined and thanks to the close approximation of molecular volume it is one of the most used surface representations. Many algorithms for its computation and visualization have been developed over the years. Currently the fastest soulutions include paralelization of contour-buildap algorithm \cite{totrov1996contour} -- algorithm that computes track of the probe on atom surfaces -- by Lindow et al. \cite{lindow2010accelerated} and Krone et al. \cite{6094043} as well as a grid-based approach by Hermosilla at al. \cite{hermosilla2017interactive} that utilizes progressive refinement for rendering of dynamic models on the fly.
+
+Yet another type of molecular surface -- \textit{Molecular skin surface (MSS)} was proposed by Edelsbrunner \cite{edelsbrunner1999deformable}. The shape of MSS depends on the single parameter \textit{s} -- shrink factor. The advantage of MSS over SES is full $C^1$ continuity.  Among the fastest aproaches to generation of MSS belong the ones by Lindow et al. \cite{lindow2010accelerated} and \cite{Yan2017}.
+
+\textit{Ligand exluded surface (LES)} is a relatively new generalization of SES proposed by Lindow et al. \cite{lindow2014ligand}. Instead of using an approximate probe, it uses full geometry of ligand to generate the surface. It thus illustrates the precise accessibility, however it is very computationally demanding.
+
+In 1982 Blinn \cite{blinn1982generalization} proposed use of a Gaussian convolution
+kernel to blend atom potentials to achieve an approximation of molecular surface. This technique is more commonly known as Metaballs. As with other techniques, improvements and new kernels have been proposed over the years (e.g. by Krone et al. \cite{krone2012fast}) and the resulting techniques belong to the fastest surface rendering approaches.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{pictures/surface2.pdf} 
+  \caption{Comparison between different molecular surfaces of the protein isomerase: a) vdW surface b) SES with probe radius 1:4 Å c) LES for equilenine d) MSSwith shrink factor 0.35 e) Gaussian surface with standard deviation equal to the atom radius. Image taken from \cite{kozlikova2015visualization}.}
+  \label{Fig:surface2}  
+\end{figure} 
+
+Note that we have only mentioned several state of the art techniques that deal with the representation of molecular surfaces. Examples of their results can be found in Figure \ref{Fig:surface2}. There are, however, countless of other approaches that exceed the capacity of this work.The detailed study concerning molecular representation can be found in state of the art report by Kozlikova et al. \cite{kozlikova2015visualization}. Available is also the report by Patané and Spagnuolo focusing on modeling of molecular surfaces.
+
+Simplifications
+
+Enhancemts
+
+
+Molecular Visualization systems
+
+enhancements - ao, depth,..., abstractions, tools (py mol, analyst)
+
+
+
+
+
+star on molecular vis \cite{kozlikova2015visualization}
+stra on surfaces \cite{patane2015state}
 
 \section{Detection of Protein Voids}
 As we mentioned before, the active site -- the reactive area of the protein is often buried deeply inside of the protein structure and accessible only via protein tunnels. Therefore extraction and analysis of these tunnels is vital for the study of protein-ligand binding. There are several methods for extracting the shape of the protein voids in general, as well as numerous ones focusing on tunnels specifically. The algorithms can be classified into several categories, depending on the approach they use: grid-based, probe-based, surface-based, Voronoi-based, ligand based and path analysis. Most of the algorithms combine several approaches, in order to achieve better results. Moreover, we can differentiate  between algorithms applicable only for static structures and algorithms taking into account molecular dynamics.
 
-Due to the extensiveness of the work related to this topic, we will name only several representatives to demonstrate the basic principles of these approaches. Complete overview of the published tools for detection and analysis of biomolecular cavities can be found in state of the art report by Krone et al. \cite{krone2016visual}.
+Due to the extensiveness of the work related to this topic, we will name only several representatives to demonstrate the basic principles of these approaches. Complete overview of the published tools for detection and analysis of biomolecular cavities can be found in state of the art reports by Krone et al. \cite{krone2016visual} and \cite{simoesgeometric}.
 %In 2012 Berzovsky et. al. published the overview these tools \cite{brezovsky2013software}.
 
 Many algorithms for void detection use a voxel grid to subdivide the 3D space containing the protein. An exaple of a \textbf{grid-based approach} that also utilizes \textbf{path analysis} is the first version of CAVER algorithm \cite{Petrek2006Caver}. Here, each node of the grid is assigned a cost, based on the maximal radius of a hypothetical ball that can be inserted into a node without intersecting voxels occupied by protein atoms -- the larger the radius, the lower the cost. A graph searching algorithm than searches for cheapest path leading from user defined active site to the outer boundary of protein. This path is than taken as tunnel centreline and the detected tunnel is tan represented as a set of maximal spheres placed on centreline.

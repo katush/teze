@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{blinn1982generalization}
+James~F Blinn.
+\newblock A generalization of algebraic surface drawing.
+\newblock {\em ACM transactions on graphics (TOG)}, 1(3):235--256, 1982.
+
 \bibitem{brezovsky2013software}
 Jan Brezovsky, Eva Chovancova, Artur Gora, Antonin Pavelka, Lada Biedermannova,
   and Jiri Damborsky.
@@ -35,12 +40,28 @@ Andre~S Dreiding.
 \newblock Einfache molekularmodelle.
 \newblock {\em Helvetica Chimica Acta}, 42(4):1339--1344, 1959.
 
+\bibitem{edelsbrunner1999deformable}
+Herbert Edelsbrunner.
+\newblock Deformable smooth surface design.
+\newblock {\em Discrete \& Computational Geometry}, 21(1):87--115, 1999.
+
+\bibitem{gumhold2003splatting}
+Stefan Gumhold.
+\newblock Splatting illuminated ellipsoids with depth correction.
+\newblock In {\em VMV}, pages 245--252, 2003.
+
 \bibitem{hendlich1997ligsite}
 Manfred Hendlich, Friedrich Rippmann, and Gerhard Barnickel.
 \newblock Ligsite: automatic and efficient detection of potential small
   molecule-binding sites in proteins.
 \newblock {\em Journal of Molecular Graphics and Modelling}, 15(6):359--363,
   1997.
+
+\bibitem{hermosilla2017interactive}
+Pedro Hermosilla, Michael Krone, Victor Guallar, Pere-Pau V{\'a}zquez,
+  {\`A}lvar Vinacua, and Timo Ropinski.
+\newblock Interactive gpu-based generation of solvent-excluded surfaces.
+\newblock {\em The Visual Computer}, pages 1--13, 2017.
 
 \bibitem{Ho2008Hollow}
 Bosco~K. Ho and Franz Gruswitz.
@@ -55,6 +76,19 @@ Gerard~J Kleywegt and T~ALWYN Jones.
 \newblock {\em Acta Crystallographica Section D: Biological Crystallography},
   50(2):178--185, 1994.
 
+\bibitem{kozlikova2015visualization}
+Barbora Kozlikova, Michael Krone, Norbert Lindow, Martin Falk, Marc Baaden,
+  Daniel Baum, Ivan Viola, Julius Parulek, Hans-Christian Hege, et~al.
+\newblock Visualization of biomolecular structures: State of the art.
+\newblock In {\em Eurographics Conference on Visualization (EuroVis)-STARs},
+  pages 061--081. The Eurographics Association, 2015.
+
+\bibitem{6094043}
+M.~Krone, S.~Grottel, and T.~Ertl.
+\newblock Parallel contour-buildup algorithm for the molecular surface.
+\newblock In {\em 2011 IEEE Symposium on Biological Data Visualization
+  (BioVis).}, pages 17--22, 2011.
+
 \bibitem{krone2016visual}
 Michael Krone, Barbora Kozl{\'\i}kov{\'a}, Norbert Lindow, Marc Baaden, Daniel
   Baum, Julius Parulek, H-C Hege, and Ivan Viola.
@@ -62,11 +96,36 @@ Michael Krone, Barbora Kozl{\'\i}kov{\'a}, Norbert Lindow, Marc Baaden, Daniel
 \newblock In {\em Computer Graphics Forum}, volume~35, pages 527--551. Wiley
   Online Library, 2016.
 
+\bibitem{krone2012fast}
+Michael Krone, John~E Stone, Thomas Ertl, and Klaus Schulten.
+\newblock Fast visualization of gaussian density surfaces for molecular
+  dynamics and particle system trajectories.
+\newblock {\em EuroVis-Short Papers}, 2012:67--71, 2012.
+
+\bibitem{lampe2007two}
+Ove~Daae Lampe, Ivan Viola, Nathalie Reuter, and Helwig Hauser.
+\newblock Two-level approach to efficient visualization of protein dynamics.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  13(6):1616--1623, 2007.
+
 \bibitem{laskowski1995surfnet}
 Roman~A Laskowski.
 \newblock Surfnet: a program for visualizing molecular surfaces, cavities, and
   intermolecular interactions.
 \newblock {\em Journal of molecular graphics}, 13(5):323--330, 1995.
+
+\bibitem{le2014illustrative}
+Mathieu Le~Muzic, Julius Parulek, Anne-Kristin Stavrum, and Ivan Viola.
+\newblock Illustrative visualization of molecular reactions using omniscient
+  intelligence and passive agents.
+\newblock In {\em Computer Graphics Forum}, volume~33, pages 141--150. Wiley
+  Online Library, 2014.
+
+\bibitem{lee1971interpretation}
+Byungkook Lee and Frederic~M Richards.
+\newblock The interpretation of protein structures: estimation of static
+  accessibility.
+\newblock {\em Journal of molecular biology}, 55(3):379IN3--400IN4, 1971.
 
 \bibitem{levitt1992pocket}
 David~G Levitt and Leonard~J Banaszak.
@@ -80,12 +139,31 @@ Jie Liang, Clare Woodward, and Herbert Edelsbrunner.
   geometry and implications for ligand design.
 \newblock {\em Protein science}, 7(9):1884--1897, 1998.
 
+\bibitem{lindow2014ligand}
+Norbert Lindow, Daniel Baum, and Hans-Christian Hege.
+\newblock Ligand excluded surface: A new type of molecular surface.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  20(12):2486--2495, 2014.
+
+\bibitem{lindow2010accelerated}
+Norbert Lindow, Daniel Baum, Steffen Prohaska, and Hans-Christian Hege.
+\newblock Accelerated visualization of dynamic molecular surfaces.
+\newblock In {\em Computer Graphics Forum}, volume~29, pages 943--952. Wiley
+  Online Library, 2010.
+
 \bibitem{caver20}
 Petr Medek, Petr Bene{\v{s}}, Ji{\v{r}}{\'\i} Sochor, Vicent Vivanloc,
   Jean-Christophe Hoelt, Coong~Binh Hong, Mathias Paulin, Jonas Spillmann,
   M~Becker, M~Teschner, et~al.
 \newblock Computation of tunnels in protein molecules using delaunay
   triangulation, 2007.
+
+\bibitem{patane2015state}
+Giuseppe Patan{\'e} and Michela Spagnuolo.
+\newblock State-of-the-art and perspectives of geometric and implicit modeling
+  for molecular surfaces.
+\newblock In {\em Computational Electrostatics for Biological Applications},
+  pages 157--176. Springer, 2015.
 
 \bibitem{Pellegrini2009PoreWalker}
 Marialuisa Pellegrini-Calace, Tim Maiwald, and Janet~M. Thornton.
@@ -120,10 +198,23 @@ Martin Raunest and Christian Kandt.
 \newblock {\em Journal of Molecular Graphics and Modelling}, 29(7):895--905,
   2011.
 
+\bibitem{richards1977areas}
+Frederic~M Richards.
+\newblock Areas, volumes, packing, and protein structure.
+\newblock {\em Annual review of biophysics and bioengineering}, 6(1):151--176,
+  1977.
+
 \bibitem{richardson1981anatomy}
 Jane~S Richardson.
 \newblock The anatomy and taxonomy of protein structure.
 \newblock {\em Advances in protein chemistry}, 34:167--339, 1981.
+
+\bibitem{simoesgeometric}
+Tiago Sim{\~o}es, Daniel Lopes, S{\'e}rgio Dias, Francisco Fernandes, Jo{\~a}o
+  Pereira, Joaquim Jorge, Chandrajit Bajaj, and Abel Gomes.
+\newblock Geometric detection algorithms for cavities on protein surfaces in
+  molecular graphics: A survey.
+\newblock In {\em Computer Graphics Forum}. Wiley Online Library.
 
 \bibitem{Smart1996Hole}
 Oliver~S Smart, Joseph~G Neduvelil, Xiaonan Wang, BA~Wallace, and Mark~SP
@@ -137,6 +228,12 @@ Ond{\v{r}}ej Strnad.
 \newblock {\em Algorithms for Detecting Pathways in Large Protein Structures
   and Their Ensembles}.
 \newblock PhD thesis, Masaryk University, Faculty of Informatics, 2014.
+
+\bibitem{totrov1996contour}
+Maxim Totrov and Ruben Abagyan.
+\newblock The contour-buildup algorithm to calculate the analytical molecular
+  surface.
+\newblock {\em Journal of structural biology}, 116(1):138--143, 1996.
 
 \bibitem{voss20103v}
 Neil~R Voss and Mark Gerstein.
@@ -153,6 +250,11 @@ E.~Yaffe, D.~Fishelovitch, H.J. Wolfson, D.~Halperin, and R.~Nussinov.
 \newblock {MolAxis}: Efficient and accurate identification of channels in
   macromolecules.
 \newblock {\em Proteins}, 73(1):72--86, 2008.
+
+\bibitem{Yan2017}
+Ke~Yan, Ho-Lun Cheng, Zhiwei Ji, Xin Zhang, and Huijuan Lu.
+\newblock Accelerating smooth molecular surface calculation.
+\newblock {\em Journal of Mathematical Biology}, Jul 2017.
 
 \bibitem{yu2009roll}
 Jian Yu, Yong Zhou, Isao Tanaka, and Min Yao.
