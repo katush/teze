@@ -1,0 +1,139 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {english}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{I\hspace {1em}{\it PART I \\ OVERVIEW}}{3}{part.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{PART I: OVERVIEW}{4}{part.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}\bfseries Introduction}{5}{chapter.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}\slshape Motivation}{5}{section.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}\slshape Main Contributions of this Thesis}{6}{section.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}\slshape Thesis Structure}{7}{section.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}\bfseries Basic Biochemical Definitions}{9}{chapter.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}\slshape Protein Spatial Structure and Synthesis}{9}{section.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.1}\rmfamily Transcription}{9}{subsection.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.2}\rmfamily Translation}{10}{subsection.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.3}\rmfamily Folding}{11}{subsection.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}\slshape Geometric and Physico-Chemical Properties of Proteins}{12}{section.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.1}\rmfamily Geometric Aspects of Protein Functioning}{13}{subsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.2}\rmfamily Physico-Chemical Properties of Proteins}{16}{subsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}\slshape Molecular Dynamics}{17}{section.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}\bfseries Related Work}{19}{chapter.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}\slshape History of Molecular and Protein Visualization}{19}{section.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}\slshape Molecular Surfaces}{27}{section.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}\slshape Analysis and Visualization of Protein Voids}{30}{section.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}\rmfamily Grid-based Algorithms}{30}{subsection.3.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}\rmfamily Voronoi-based Algorithms}{31}{subsection.3.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.3}\rmfamily Surface-based Algorithms}{34}{subsection.3.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.4}\rmfamily Hybrid Solutions}{35}{subsection.3.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.5}\rmfamily Alternative Methods Using Path Planning}{36}{subsection.3.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.6}\rmfamily Protein Tunnels in Dynamics}{37}{subsection.3.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}\bfseries Achieved Results}{39}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}\slshape Filtering of Protein Tunnels}{40}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}\rmfamily ATH and STH Maps}{40}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.2}\rmfamily Molecular Pass Planning}{43}{subsection.4.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}\slshape Visualization of Asymmetric Tunnels}{46}{section.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}\rmfamily Geometry-based Approach to Asymmetric Tunnel Detection}{47}{subsection.4.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}\rmfamily Enhanced Algorithm for Computation of Asymmetric Tunnels}{50}{subsection.4.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}\slshape Visualizing Movements of Protein Tunnels}{51}{section.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.1}\rmfamily Tunnel Animation Using Spheres}{52}{subsection.4.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.2}\rmfamily Tunnel Animation Using Tube Mesh}{54}{subsection.4.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.3.3}\rmfamily Tunnel Animation Using Tetrahedra Mesh}{55}{subsection.4.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}\slshape Visualization of Biochemical Properties}{57}{section.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.1}\rmfamily MoleCollar}{57}{subsection.4.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.2}\rmfamily AnimoAminoMiner}{59}{subsection.4.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.4.3}\rmfamily User Interaction}{60}{subsection.4.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}\bfseries Evaluation}{63}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}\slshape Filtering of Protein Tunnels}{65}{section.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}\slshape Geometric Properties of Tunnels}{66}{section.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}\slshape Physico-Chemical Properties of Proteins}{68}{section.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}\slshape Evaluation Conclusion}{70}{section.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}\bfseries CAVER Analyst}{71}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}\bfseries Conclusion}{75}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.1}\slshape Summary}{75}{section.7.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}\slshape Future Work}{75}{section.7.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{PART II: Publications}{78}{part*.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Paper A}{81}{chapter*.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}\slshape Introduction}{82}{section.PaperA.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}\slshape Asymmetric tunnels}{83}{section.PaperA.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}\rmfamily Problem definition}{83}{subsection.PaperA.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}\rmfamily Proposed solution}{86}{subsection.PaperA.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}\slshape Algorithm}{86}{section.PaperA.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}\rmfamily Multi-level grid data structure}{88}{subsection.PaperA.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}\rmfamily Enhancing region of interest}{90}{subsection.PaperA.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}\rmfamily Molecular surfaces}{91}{subsection.PaperA.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}\rmfamily Accelerating probe placement}{92}{subsection.PaperA.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.5}\rmfamily Special cases: Two or more voids}{93}{subsection.PaperA.3.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}\slshape Visualization}{93}{section.PaperA.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1}\rmfamily Visualization of cross-sections}{94}{subsection.PaperA.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}\slshape Analysis \& Results}{97}{section.PaperA.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.1}\rmfamily Stability tests}{98}{subsection.PaperA.5.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.2}\rmfamily Average running time}{99}{subsection.PaperA.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}\slshape Conclusion and Future work}{100}{section.PaperA.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}\slshape Introduction}{102}{section.PaperB.1}

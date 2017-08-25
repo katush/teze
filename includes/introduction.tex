@@ -88,14 +88,19 @@ However, in both cases the researchers are looking for the answers to the follow
 \item{Can these problems can be resolved by mutating the protein amino acids?}
 \end{itemize}
 
-There is already great amount of published work aiming to answer these questions either by studying the tunnel properties or by directly simulating the transportation of the ligand to the active site. However, with the complexity of protein structures in combination with the ever-changing molecular dynamics, the answers are not trivial. Figure \ref{Fig:trajectory} for example depicts trajectory of a ligand in a MD simulation consisting of 50 000 time steps. It is apparent, that further analysis is necessary to identify significant parts and patterns in this simulation. 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\linewidth]{pictures/lig_movement.png} 
+\begin{wrapfigure}{l}{0.4\textwidth}
+\vspace{-32pt}
+  \begin{center}
+  \includegraphics[width=0.9\linewidth]{pictures/lig_movement.png} 
+  \vspace{-10pt}
   \caption{Ligand trajectory (gray) in a simulation containing 50 000 time steps. The protein chain is depicted in blue.}
   \label{Fig:trajectory}  
-\end{figure} 
+  \end{center}
+  \vspace{-30pt}
+\end{wrapfigure} 
+
+\vspace{10pt}
+There is already great amount of published work aiming to answer these questions either by studying the tunnel properties or by directly simulating the transportation of the ligand to the active site. However, with the complexity of protein structures in combination with the ever-changing molecular dynamics, the answers are not trivial. Figure \ref{Fig:trajectory} for example depicts trajectory of a ligand in a MD simulation consisting of 50 000 time steps. It is apparent, that further analysis is necessary to identify significant parts and patterns in this simulation. 
 
 \subsection{Protein-Protein Interactions}
 Most of the proteins responsible for various functions in cellular life are operating in larger multi-protein complexes. For example a family of SMC complexes (structural maintenance of chromosomes) govern the organisation of DNA in the cell nucleus. However, in order to interpret their functions properly, it is vital to understand the way the protein are interacting together in these complexes. Mapping the \textit{contact zones} consisting of surface amino acids interacting between the proteins is time consuming process that requires expensive laboratory experiments. Several computational tools therefore aim to reduce the amount of necessary experiments by predicting the possible docking conformations of given proteins. These tools can produce tens to hundreds of possible solutions and it is than up to biochemists to identify the plausible ones. To determine this, the researchers are trying to answer following questions:

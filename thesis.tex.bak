@@ -1,0 +1,151 @@
+\documentclass[final, notable, nolof, nolot, 11pt, nocover]{fithesis3}
+
+%% The following section sets up the other used packages.
+\usepackage[main=english]{babel}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{algorithmicx}
+\usepackage{amsmath}
+\usepackage{mathptmx}
+\usepackage{stfloats}
+\usepackage{textcase}
+\usepackage{esvect}
+\usepackage{epstopdf}
+\usepackage{wrapfig}
+\usepackage{pdfpages}
+\usepackage{subfigure}
+\usepackage{makeidx}
+\usepackage[textsize=small,colorinlistoftodos,disable]{todonotes}
+\usepackage{textcomp}
+\usepackage{chngcntr}
+
+%\usepackage{verbatim}
+%\usepackage{showframe}
+
+%% The following section sets up the metadata of the thesis.
+\thesissetup{
+    university    = mu,
+    faculty       = fi,
+    type          = d,
+    author        = Jan By\v{s}ka,
+    gender        = m,
+    advisor       = {assoc. prof. Jiří Sochor \\ \textbf{Co-Advisor:} Dr. Barbora Kozlíková},
+    title         = {Analysis and Visualization of Protein Structures},
+    TeXtitle      = {Analysis and Visualization of Protein Structures},
+    keywords      = {protein, visualization, molecular surface, cavity, protein void, tunnel
+CAVER Analyst},
+    TeXkeywords   = {protein, visualization, molecular surface, protein void, cavity, tunnel, molecular dynamics, CAVER Analyst},
+}
+
+
+\thesislong{abstract}{
+Proteins play an essential role in almost every biological process within living organisms. The detailed understanding of their functions, including studying their geometry, physico-chemical properties, and dynamics, is a vital condition in many fields. This knowledge can be, for instance, used to develop various chemical compounds, such as drugs. In this particular case, the drug designers are searching for a proper combination of a small molecule (ligand) and a protein, which leads to their mutual chemical reaction changing the ligand properties in a desired way. However, the in-vitro experiments are very expensive and time consuming. Therefore, the in-silico approaches are becoming very popular. In this thesis, we focus on the analysis and visualization of protein structures, namely their inner voids. The presence of these voids highly influences the reactivity of protein with other molecules. We first describe various techniques for protein and void analysis and then propose several visualization techniques for the representation of computed results. In the analysis part, we are interested in a specific type of voids called tunnels. \todo{nasledujici veta, je trosku divna, ne?}They serve as transportation paths for small ligands to the protein active site. The active site, usually buried deeply inside the protein structure, denotes a place where a ligand can bind to the protein. In the visualization part the thesis describes our novel solutions for particular problems, such as depicting the real shape of the protein tunnel or a convenient way to visualize various physico-chemical properties of tunnel surroundings.
+}
+
+\thesislong{thanks}{
+Hereby I would like to thank my two supervisors, assoc. prof. Jiří Sochor and Dr. Barbora Kozlíková for the guidance and multiple advises they provided me during my studies. Moreover, I would like to thank to all my past and present colleagues who cooperated with me on the development of CAVER Analyst and related research projects over the last few years. This includes many generous people from the Masaryk University as well as from the Technical University of Vienna and University of Bergen. Finally, I would like to thank to my family and my closest friends for their endless support during my studies.
+
+\hspace{1cm}
+
+
+
+%This work was supported by grants from the Vienna Science and Technology Fund (WWTF) through project VRG11--010 and the OeAD ICM and MSMT--1492/2015--1 through project CZ 17/2015 and by Norway grants through project NF--CZ07--MOP--2--086--2014. \todo{jeste jednou prosim koukni na tohle, trosku jsem to zmenil - zejmena jsem přehodil viden a norsko, aby to se nelámalo uprostřed kodu.}
+
+This work was supported by the OeAD ICM and MSMT-1492/2015-1 through project 7AMB15AT018~CZ~17/2015 and by Norway grants through project NF--CZ07--MOP--2--086--2014.
+%through the Norway grants project NF-CZ07-MOP-2-086-2014, and 
+}
+
+%% The following section sets up the bibliography.
+\usepackage{csquotes}
+\usepackage[             
+  backend=biber,         
+  bibstyle=numeric,          
+  citestyle=numeric-comp, 
+  sorting=none,           
+  sortlocale=auto,
+%  maxnames=3,
+  firstinits=true         
+]{biblatex}               
+
+\renewbibmacro*{journal}{%
+  \iffieldundef{journaltitle}
+    {}
+    {\printtext[journaltitle]{%
+       \printfield[noformat]{journaltitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[noformat]{journalsubtitle}}}}
+       
+\renewbibmacro*{booktitle}{%
+  \iffieldundef{booktitle}
+    {}
+    {\printtext[booktitle]{%
+       \printfield[noformat]{booktitle}%
+       \setunit{\subtitlepunct}%
+       \printfield[noformat]{booksubtitle}}}}
+       
+       
+\DeclareFieldFormat{titlecase}{\MakeSentenceCase{#1}}     
+\renewcommand*{\bibfont}{\small}
+\addbibresource{references.bib}
+
+% Defines usefull commands.
+\newcommand{\ie}{i.e.,~}
+\newcommand{\eg}{e.g.,~}
+
+% The following configures the algorithm package.
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+\newcommand{\var}[1]{\textit{#1}}
+
+% The following configures the subfigure.
+\renewcommand{\thesubfigure}{(\Alph{subfigure})}
+
+% The following section sets up the index.
+\makeindex
+
+\pdfminorversion=4
+
+%\emergencystretch=1em
+
+\begin{document}
+
+%Makes the \part command work.
+\pdfstringdefDisableCommands{%
+	\let\MakeUppercase\relax
+}
+
+\listoftodos
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{OVERVIEW}
+\label{Sec:Overview}
+
+\input{includes/introduction.tex}
+\input{includes/biochemy.tex}
+\input{includes/star.tex}
+\input{includes/results.tex}
+\input{includes/evaluation.tex}
+\input{includes/analyst.tex}
+\input{includes/conclusion.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part{PUBLICATIONS}
+\renewcommand{\thesection}{\arabic{section}}
+
+\label{Sec:Publications}
+\input{includes/publications.tex}
+
+
+\printbibliography[title=References]
+
+\end{document}

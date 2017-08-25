@@ -3,54 +3,52 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: thesis.bib
-Repeated entry---line 135 of file thesis.bib
- : @inproceedings{lindow2010accelerated
- :                                     ,
-I'm skipping whatever remains of this entry
 Warning--can't use both volume and number fields in krone2016visual
+Warning--can't use both volume and number fields in krone2013interactive
+Warning--empty journal in lavalle1998rapidly
 Warning--can't use both volume and number fields in le2014illustrative
 Warning--can't use both volume and number fields in lindow2010accelerated
 Warning--empty year in simoesgeometric
 Warning--empty school in Waals1873PhDThesis
-You've used 43 entries,
+You've used 65 entries,
             2118 wiz_defined-function locations,
-            779 strings with 12693 characters,
-and the built_in function-call counts, 16607 in all, are:
-= -- 1637
-> -- 873
-< -- 12
-+ -- 351
-- -- 302
-* -- 1311
-:= -- 2751
-add.period$ -- 134
-call.type$ -- 43
-change.case$ -- 274
+            886 strings with 16962 characters,
+and the built_in function-call counts, 26029 in all, are:
+= -- 2617
+> -- 1295
+< -- 24
++ -- 519
+- -- 446
+* -- 1962
+:= -- 4199
+add.period$ -- 210
+call.type$ -- 65
+change.case$ -- 412
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 556
-empty$ -- 1206
-format.name$ -- 302
-if$ -- 3403
+cite$ -- 72
+duplicate$ -- 929
+empty$ -- 1933
+format.name$ -- 446
+if$ -- 5460
 int.to.chr$ -- 0
-int.to.str$ -- 43
-missing$ -- 41
-newline$ -- 217
-num.names$ -- 86
-pop$ -- 247
+int.to.str$ -- 65
+missing$ -- 62
+newline$ -- 326
+num.names$ -- 130
+pop$ -- 406
 preamble$ -- 1
-purify$ -- 234
+purify$ -- 350
 quote$ -- 0
-skip$ -- 396
+skip$ -- 681
 stack$ -- 0
-substring$ -- 1145
-swap$ -- 123
-text.length$ -- 12
+substring$ -- 1825
+swap$ -- 256
+text.length$ -- 24
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 170
-warning$ -- 5
-while$ -- 162
-width$ -- 45
-write$ -- 477
-(There was 1 error message)
+type$ -- 258
+warning$ -- 7
+while$ -- 256
+width$ -- 67
+write$ -- 726
+(There were 7 warnings)

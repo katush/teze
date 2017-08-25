@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{an2005pocketome}
+Jianghong An, Maxim Totrov, and Ruben Abagyan.
+\newblock Pocketome via comprehensive identification and classification of
+  ligand binding envelopes.
+\newblock {\em Molecular \& Cellular Proteomics}, 4(6):752--761, 2005.
+
 \bibitem{blinn1982generalization}
 James~F Blinn.
 \newblock A generalization of algebraic surface drawing.
@@ -19,6 +25,12 @@ Eva Chovancova, Antonin Pavelka, Petr Benes, Ondrej Strnad, Jan Brezovsky,
   protein structures.
 \newblock {\em PLoS computational biology}, 8(10):e1002708, 2012.
 
+\bibitem{cipriano2007molecular}
+Gregory Cipriano and Michael Gleicher.
+\newblock Molecular surface abstraction.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  13(6):1608--1615, 2007.
+
 \bibitem{Coleman2009CHUNNEL}
 Ryan~G. Coleman and Kim~A. Sharp.
 \newblock Finding and characterizing tunnels in macromolecules with application
@@ -29,6 +41,19 @@ Ryan~G. Coleman and Kim~A. Sharp.
 Robert~B Corey and Linus Pauling.
 \newblock Molecular models of amino acids, peptides, and proteins.
 \newblock {\em Review of Scientific Instruments}, 24(8):621--627, 1953.
+
+\bibitem{cortes2005path}
+Juan Cortés, Thierry Siméon, V~Ruiz~de Angulo, David Guieysse, Magali
+  Remaud-Siméon, and Vinh Tran.
+\newblock A path planning approach for computing large-amplitude motions of
+  flexible molecules.
+\newblock {\em Bioinformatics}, 21(suppl\_1):i116--i125, 2005.
+
+\bibitem{czirjak2015princces}
+Gábor Czirják.
+\newblock Princces: Continuity-based geometric decomposition and systematic
+  visualization of the void repertoire of proteins.
+\newblock {\em Journal of Molecular Graphics and Modelling}, 62:118--127, 2015.
 
 \bibitem{dalton1808new}
 John Dalton.
@@ -57,17 +82,50 @@ Manfred Hendlich, Friedrich Rippmann, and Gerhard Barnickel.
 \newblock {\em Journal of Molecular Graphics and Modelling}, 15(6):359--363,
   1997.
 
+\bibitem{hermosilla2016high}
+Pedro Hermosilla, Victor Guallar, Alvar Vinacua, and Pere-Pau V{\'a}zquez.
+\newblock High quality illustrative effects for molecular rendering.
+\newblock {\em Computers \& Graphics}, 54:113--120, 2016.
+
+\bibitem{hermosilla2015instant}
+Pedro Hermosilla, V{\'\i}ctor Guallar, {\'A}lvaro Vinacua~Pla, and Pere~Pau
+  V{\'a}zquez~Alcocer.
+\newblock Instant visualization of secondary structures of molecular models.
+\newblock In {\em VCBM 15: Eurographics Workshop on Visual Computing for
+  Biology and Medicine}, pages 51--60. European Association for Computer
+  Graphics (Eurographics), 2015.
+
 \bibitem{hermosilla2017interactive}
 Pedro Hermosilla, Michael Krone, Victor Guallar, Pere-Pau V{\'a}zquez,
   {\`A}lvar Vinacua, and Timo Ropinski.
 \newblock Interactive gpu-based generation of solvent-excluded surfaces.
 \newblock {\em The Visual Computer}, pages 1--13, 2017.
 
+\bibitem{hernandez2009sitehound}
+Marylens Hernandez, Dario Ghersi, and Roberto Sanchez.
+\newblock Sitehound-web: a server for ligand binding site identification in
+  protein structures.
+\newblock {\em Nucleic acids research}, 37(suppl\_2):W413--W416, 2009.
+
 \bibitem{Ho2008Hollow}
 Bosco~K. Ho and Franz Gruswitz.
 \newblock {HOLLOW}: Generating accurate representations of channel and interior
   surfaces in molecular structures.
 \newblock {\em BMC Structural Biology}, 8(1):49, 2008.
+
+\bibitem{jurvcik2016accelerated}
+Adam Jurčík, Július Parulek, Jiří Sochor, and Barbora Kozlíkova.
+\newblock Accelerated visualization of transparent molecular surfaces in
+  molecular dynamics.
+\newblock In {\em Pacific Visualization Symposium (PacificVis), 2016 IEEE},
+  pages 112--119. IEEE, 2016.
+
+\bibitem{kim2013tunnels}
+Deok-Soo Kim, Youngsong Cho, Jae-Kwan Kim, and Kokichi Sugihara.
+\newblock Tunnels and voids in molecules via voronoi diagrams and
+  beta-complexes.
+\newblock In {\em Transactions on Computational Science XX}, pages 92--111.
+  Springer, 2013.
 
 \bibitem{kleywegt1994detection}
 Gerard~J Kleywegt and T~ALWYN Jones.
@@ -76,6 +134,12 @@ Gerard~J Kleywegt and T~ALWYN Jones.
 \newblock {\em Acta Crystallographica Section D: Biological Crystallography},
   50(2):178--185, 1994.
 
+\bibitem{kokh2013trapp}
+Daria~B Kokh, Stefan Richter, Stefan Henrich, Paul Czodrowski, Friedrich
+  Rippmann, and Rebecca~C Wade.
+\newblock Trapp: a tool for analysis of transient binding pockets in proteins,
+  2013.
+
 \bibitem{kozlikova2015visualization}
 Barbora Kozlikova, Michael Krone, Norbert Lindow, Martin Falk, Marc Baaden,
   Daniel Baum, Ivan Viola, Julius Parulek, Hans-Christian Hege, et~al.
@@ -83,11 +147,22 @@ Barbora Kozlikova, Michael Krone, Norbert Lindow, Martin Falk, Marc Baaden,
 \newblock In {\em Eurographics Conference on Visualization (EuroVis)-STARs},
   pages 061--081. The Eurographics Association, 2015.
 
+\bibitem{krone2011interactive}
+Michael Krone, Martin Falk, Sascha Rehm, J{\"u}rgen Pleiss, and Thomas Ertl.
+\newblock Interactive exploration of protein cavities.
+\newblock {\em Computer Graphics Forum}, 30(3):673--682, 2011.
+
 \bibitem{6094043}
-M.~Krone, S.~Grottel, and T.~Ertl.
+Michael Krone, Sebastian Grottel, and Thomas Ertl.
 \newblock Parallel contour-buildup algorithm for the molecular surface.
-\newblock In {\em 2011 IEEE Symposium on Biological Data Visualization
-  (BioVis).}, pages 17--22, 2011.
+\newblock In {\em Biological Data Visualization (BioVis), 2011 IEEE Symposium
+  on}, pages 17--22. IEEE, 2011.
+
+\bibitem{krone2014visual}
+Michael Krone, Daniel Kauker, Guido Reina, and Thomas Ertl.
+\newblock Visual analysis of dynamic protein cavities and binding sites.
+\newblock In {\em Visualization Symposium (PacificVis), 2014 IEEE Pacific},
+  pages 301--305. IEEE, 2014.
 
 \bibitem{krone2016visual}
 Michael Krone, Barbora Kozl{\'\i}kov{\'a}, Norbert Lindow, Marc Baaden, Daniel
@@ -95,6 +170,13 @@ Michael Krone, Barbora Kozl{\'\i}kov{\'a}, Norbert Lindow, Marc Baaden, Daniel
 \newblock Visual analysis of biomolecular cavities: State of the art.
 \newblock In {\em Computer Graphics Forum}, volume~35, pages 527--551. Wiley
   Online Library, 2016.
+
+\bibitem{krone2013interactive}
+Michael Krone, Guido Reina, Christoph Schulz, Tobias Kulschewski, J{\"u}rgen
+  Pleiss, and Thomas Ertl.
+\newblock Interactive extraction and tracking of biomolecular surface features.
+\newblock In {\em Computer Graphics Forum}, volume~32, pages 331--340. Wiley
+  Online Library, 2013.
 
 \bibitem{krone2012fast}
 Michael Krone, John~E Stone, Thomas Ertl, and Klaus Schulten.
@@ -113,6 +195,17 @@ Roman~A Laskowski.
 \newblock Surfnet: a program for visualizing molecular surfaces, cavities, and
   intermolecular interactions.
 \newblock {\em Journal of molecular graphics}, 13(5):323--330, 1995.
+
+\bibitem{laurie2005q}
+Alasdair~TR Laurie and Richard~M Jackson.
+\newblock Q-sitefinder: an energy-based method for the prediction of
+  protein--ligand binding sites.
+\newblock {\em Bioinformatics}, 21(9):1908--1916, 2005.
+
+\bibitem{lavalle1998rapidly}
+Steven~M LaValle.
+\newblock Rapidly-exploring random trees: A new tool for path planning.
+\newblock 1998.
 
 \bibitem{le2014illustrative}
 Mathieu Le~Muzic, Julius Parulek, Anne-Kristin Stavrum, and Ivan Viola.
@@ -133,6 +226,12 @@ David~G Levitt and Leonard~J Banaszak.
   protein cavities and their surrounding amino acids.
 \newblock {\em Journal of molecular graphics}, 10(4):229--234, 1992.
 
+\bibitem{levitt1976simplified}
+Michael Levitt.
+\newblock A simplified representation of protein conformations for rapid
+  simulation of protein folding.
+\newblock {\em Journal of molecular biology}, 104(1):59--107, 1976.
+
 \bibitem{liang1998anatomy}
 Jie Liang, Clare Woodward, and Herbert Edelsbrunner.
 \newblock Anatomy of protein pockets and cavities: measurement of binding site
@@ -151,6 +250,11 @@ Norbert Lindow, Daniel Baum, Steffen Prohaska, and Hans-Christian Hege.
 \newblock In {\em Computer Graphics Forum}, volume~29, pages 943--952. Wiley
   Online Library, 2010.
 
+\bibitem{masood2015chexvis}
+Talha~Bin Masood, Sankaran Sandhya, Nagasuma Chandra, and Vijay Natarajan.
+\newblock Chexvis: a tool for molecular channel extraction and visualization.
+\newblock {\em BMC bioinformatics}, 16(1):119, 2015.
+
 \bibitem{caver20}
 Petr Medek, Petr Bene{\v{s}}, Ji{\v{r}}{\'\i} Sochor, Vicent Vivanloc,
   Jean-Christophe Hoelt, Coong~Binh Hong, Mathias Paulin, Jonas Spillmann,
@@ -158,19 +262,26 @@ Petr Medek, Petr Bene{\v{s}}, Ji{\v{r}}{\'\i} Sochor, Vicent Vivanloc,
 \newblock Computation of tunnels in protein molecules using delaunay
   triangulation, 2007.
 
+\bibitem{miller1994efficient}
+Gavin Miller.
+\newblock Efficient algorithms for local and global accessibility shading.
+\newblock In {\em Proceedings of the 21st annual conference on Computer
+  graphics and interactive techniques}, pages 319--326. ACM, 1994.
+
+\bibitem{paramo2014efficient}
+Teresa Paramo, Alexandra East, Diana Garzón, Martin~B Ulmschneider, and
+  Peter~J Bond.
+\newblock Efficient characterization of protein cavities within molecular
+  simulation trajectories: trj\_cavity.
+\newblock {\em Journal of chemical theory and computation}, 10(5):2151--2164,
+  2014.
+
 \bibitem{patane2015state}
 Giuseppe Patan{\'e} and Michela Spagnuolo.
 \newblock State-of-the-art and perspectives of geometric and implicit modeling
   for molecular surfaces.
 \newblock In {\em Computational Electrostatics for Biological Applications},
   pages 157--176. Springer, 2015.
-
-\bibitem{Pellegrini2009PoreWalker}
-Marialuisa Pellegrini-Calace, Tim Maiwald, and Janet~M. Thornton.
-\newblock {PoreWalker}: A novel tool for the identification and
-  characterization of channels in transmembrane proteins from their
-  three-dimensional structure.
-\newblock {\em PLOS Computational Biology}, 5(7):e1000440, 2009.
 
 \bibitem{perkins2005history}
 James~A Perkins.
@@ -190,6 +301,13 @@ Martin Pet{\v{r}}ek, Michal Otyepka, Pavel Ban{\'a}{\v{s}}, Pavl{\'\i}na
 \newblock Caver: a new tool to explore routes from protein clefts, pockets and
   cavities.
 \newblock {\em BMC bioinformatics}, 7(1):316, 2006.
+
+\bibitem{postarnakevich2009global}
+Nicolay Postarnakevich and Rahul Singh.
+\newblock Global-to-local representation and visualization of molecular
+  surfaces using deformable models.
+\newblock In {\em Proceedings of the 2009 ACM symposium on Applied Computing},
+  pages 782--787. ACM, 2009.
 
 \bibitem{raunest2011dxtuber}
 Martin Raunest and Christian Kandt.
@@ -216,12 +334,12 @@ Tiago Sim{\~o}es, Daniel Lopes, S{\'e}rgio Dias, Francisco Fernandes, Jo{\~a}o
   molecular graphics: A survey.
 \newblock In {\em Computer Graphics Forum}. Wiley Online Library.
 
-\bibitem{Smart1996Hole}
-Oliver~S Smart, Joseph~G Neduvelil, Xiaonan Wang, BA~Wallace, and Mark~SP
-  Sansom.
-\newblock Hole: a program for the analysis of the pore dimensions of ion
-  channel structural models.
-\newblock {\em Journal of Molecular Graphics}, 14(6):354--360, 1996.
+\bibitem{sridharamurthy2016extraction}
+Raghavendra Sridharamurthy, Talha~Bin Masood, Harish Doraiswamy, Siddharth
+  Patel, Raghavan Varadarajan, and Vijay Natarajan.
+\newblock Extraction of robust voids and pockets in proteins.
+\newblock In {\em Visualization in Medicine and Life Sciences III}, pages
+  329--349. Springer, 2016.
 
 \bibitem{Strnad2014Thesis}
 Ond{\v{r}}ej Strnad.
@@ -235,6 +353,20 @@ Maxim Totrov and Ruben Abagyan.
   surface.
 \newblock {\em Journal of structural biology}, 116(1):138--143, 1996.
 
+\bibitem{vonasek2016application}
+Vojt{\v{e}}ch Von{\'a}sek and Barbora Kozl{\'\i}kov{\'a}.
+\newblock Application of sampling-based path planning for tunnel detection in
+  dynamic protein structures.
+\newblock In {\em Methods and Models in Automation and Robotics (MMAR), 2016
+  21st International Conference on}, pages 1010--1015. IEEE, 2016.
+
+\bibitem{vonasek2017tunnel}
+Vojt{\v{e}}ch Von{\'a}sek and Barbora Kozl{\'\i}kov{\'a}.
+\newblock Tunnel detection in protein structures using sampling-based motion
+  planning.
+\newblock In {\em Robot Motion and Control (RoMoCo), 2017 11th International
+  Workshop on}, pages 185--192. IEEE, 2017.
+
 \bibitem{voss20103v}
 Neil~R Voss and Mark Gerstein.
 \newblock 3v: cavity, channel and cleft volume calculator and extractor.
@@ -245,11 +377,17 @@ Johannes Diderik van~der Waals.
 \newblock {\em Over de Continuiteit van den Gas--en Vloeistoftoestand}.
 \newblock PhD thesis, 1873.
 
+\bibitem{wahle2011gpu}
+Manuel Wahle and Stefan Birmanns.
+\newblock Gpu-accelerated visualization of protein dynamics in ribbon mode.
+\newblock In {\em Visualization and Data Analysis}, page 786805, 2011.
+
 \bibitem{Yaffe2008MolAxis}
-E.~Yaffe, D.~Fishelovitch, H.J. Wolfson, D.~Halperin, and R.~Nussinov.
-\newblock {MolAxis}: Efficient and accurate identification of channels in
+Eitan Yaffe, Dan Fishelovitch, Haim~J Wolfson, Dan Halperin, and Ruth Nussinov.
+\newblock Molaxis: efficient and accurate identification of channels in
   macromolecules.
-\newblock {\em Proteins}, 73(1):72--86, 2008.
+\newblock {\em Proteins: Structure, Function, and Bioinformatics},
+  73(1):72--86, 2008.
 
 \bibitem{Yan2017}
 Ke~Yan, Ho-Lun Cheng, Zhiwei Ji, Xin Zhang, and Huijuan Lu.
