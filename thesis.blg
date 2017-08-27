@@ -1,8 +1,9 @@
-This is BibTeX, Version 0.99d (TeX Live 2016/W32TeX)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 The style file: plain.bst
 Database file #1: thesis.bib
+Warning--can't use both volume and number fields in byvska2015molecollar
 Warning--can't use both volume and number fields in krone2016visual
 Warning--can't use both volume and number fields in krone2013interactive
 Warning--empty journal in lavalle1998rapidly
@@ -10,45 +11,45 @@ Warning--can't use both volume and number fields in le2014illustrative
 Warning--can't use both volume and number fields in lindow2010accelerated
 Warning--empty year in simoesgeometric
 Warning--empty school in Waals1873PhDThesis
-You've used 65 entries,
+You've used 72 entries,
             2118 wiz_defined-function locations,
-            886 strings with 16962 characters,
-and the built_in function-call counts, 26029 in all, are:
-= -- 2617
-> -- 1295
-< -- 24
-+ -- 519
-- -- 446
-* -- 1962
-:= -- 4199
-add.period$ -- 210
-call.type$ -- 65
-change.case$ -- 412
+            924 strings with 18597 characters,
+and the built_in function-call counts, 29034 in all, are:
+= -- 2915
+> -- 1461
+< -- 28
++ -- 584
+- -- 504
+* -- 2203
+:= -- 4686
+add.period$ -- 234
+call.type$ -- 72
+change.case$ -- 462
 chr.to.int$ -- 0
-cite$ -- 72
-duplicate$ -- 929
-empty$ -- 1933
-format.name$ -- 446
-if$ -- 5460
+cite$ -- 80
+duplicate$ -- 1032
+empty$ -- 2149
+format.name$ -- 504
+if$ -- 6090
 int.to.chr$ -- 0
-int.to.str$ -- 65
-missing$ -- 62
-newline$ -- 326
-num.names$ -- 130
-pop$ -- 406
+int.to.str$ -- 72
+missing$ -- 69
+newline$ -- 361
+num.names$ -- 144
+pop$ -- 455
 preamble$ -- 1
-purify$ -- 350
+purify$ -- 393
 quote$ -- 0
-skip$ -- 681
+skip$ -- 749
 stack$ -- 0
-substring$ -- 1825
-swap$ -- 256
-text.length$ -- 24
+substring$ -- 2012
+swap$ -- 285
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 258
-warning$ -- 7
-while$ -- 256
-width$ -- 67
-write$ -- 726
-(There were 7 warnings)
+type$ -- 286
+warning$ -- 8
+while$ -- 286
+width$ -- 74
+write$ -- 807
+(There were 8 warnings)

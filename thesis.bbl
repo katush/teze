@@ -18,6 +18,22 @@ Jan Brezovsky, Eva Chovancova, Artur Gora, Antonin Pavelka, Lada Biedermannova,
   protein tunnels and channels.
 \newblock {\em Biotechnology advances}, 31(1):38--49, 2013.
 
+\bibitem{byvska2015molecollar}
+J~By{\v{s}}ka, A~Jur{\v{c}}{\'\i}k, M~Eduard Gr{\"o}ller, Ivan Viola, and
+  Barbora Kozl{\'\i}kov{\'a}.
+\newblock Molecollar and tunnel heat map visualizations for conveying
+  spatio-temporo-chemical properties across and along protein voids.
+\newblock In {\em Computer Graphics Forum}, volume~34, pages 1--10. Wiley
+  Online Library, 2015.
+
+\bibitem{byvska2016animoaminominer}
+Jan By{\v{s}}ka, Mathieu Le~Muzic, M~Eduard Gr{\"o}ller, Ivan Viola, and
+  Barbora Kozlikova.
+\newblock Animoaminominer: Exploration of protein tunnels and their properties
+  in molecular dynamics.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  22(1):747--756, 2016.
+
 \bibitem{caver30}
 Eva Chovancova, Antonin Pavelka, Petr Benes, Ondrej Strnad, Jan Brezovsky,
   Barbora Kozlikova, Artur Gora, Vilem Sustr, Martin Klvana, Petr Medek, et~al.
@@ -140,6 +156,14 @@ Daria~B Kokh, Stefan Richter, Stefan Henrich, Paul Czodrowski, Friedrich
 \newblock Trapp: a tool for analysis of transient binding pockets in proteins,
   2013.
 
+\bibitem{kolesar2016unfolding}
+Ivan Koles{\'a}r, Jan By{\v{s}}ka, Julius Parulek, Helwig Hauser, and Barbora
+  Kozl{\'\i}kov{\'a}.
+\newblock Unfolding and interactive exploration of protein tunnels and their
+  dynamics.
+\newblock In {\em Proceedings of the Eurographics Workshop on Visual Computing
+  for Biology and Medicine}, pages 1--10. Eurographics Association, 2016.
+
 \bibitem{kozlikova2015visualization}
 Barbora Kozlikova, Michael Krone, Norbert Lindow, Martin Falk, Marc Baaden,
   Daniel Baum, Ivan Viola, Julius Parulek, Hans-Christian Hege, et~al.
@@ -157,12 +181,6 @@ Michael Krone, Sebastian Grottel, and Thomas Ertl.
 \newblock Parallel contour-buildup algorithm for the molecular surface.
 \newblock In {\em Biological Data Visualization (BioVis), 2011 IEEE Symposium
   on}, pages 17--22. IEEE, 2011.
-
-\bibitem{krone2014visual}
-Michael Krone, Daniel Kauker, Guido Reina, and Thomas Ertl.
-\newblock Visual analysis of dynamic protein cavities and binding sites.
-\newblock In {\em Visualization Symposium (PacificVis), 2014 IEEE Pacific},
-  pages 301--305. IEEE, 2014.
 
 \bibitem{krone2016visual}
 Michael Krone, Barbora Kozl{\'\i}kov{\'a}, Norbert Lindow, Marc Baaden, Daniel
@@ -238,6 +256,24 @@ Jie Liang, Clare Woodward, and Herbert Edelsbrunner.
   geometry and implications for ligand design.
 \newblock {\em Protein science}, 7(9):1884--1897, 1998.
 
+\bibitem{Lindow2012DynamicChannels}
+Norbert Lindow, Daniel Baum, Ana-Nicoleta Bondar, and Hans-Christian Hege.
+\newblock Dynamic channels in biomolecular systems: Path analysis and
+  visualization.
+\newblock In {\em IEEE Symposium on Biological Data Visualization}, pages
+  99--106. IEEE, 2012.
+
+\bibitem{Lindow2013DynamicCavities}
+Norbert Lindow, Daniel Baum, Ana-Nicoleta Bondar, and Hans-Christian Hege.
+\newblock Exploring cavity dynamics in biomolecular systems.
+\newblock {\em BMC Bioinformatics}, 14(Suppl 19):S5, 2013.
+
+\bibitem{Lindow2011Voronoi}
+Norbert Lindow, Daniel Baum, and Hans-Christian Hege.
+\newblock Voronoi--based extraction and visualization of molecular paths.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  17(12):2025--2034, 2011.
+
 \bibitem{lindow2014ligand}
 Norbert Lindow, Daniel Baum, and Hans-Christian Hege.
 \newblock Ligand excluded surface: A new type of molecular surface.
@@ -268,6 +304,13 @@ Gavin Miller.
 \newblock In {\em Proceedings of the 21st annual conference on Computer
   graphics and interactive techniques}, pages 319--326. ACM, 1994.
 
+\bibitem{olechnovivc2010voroprot}
+Kliment Olechnovi{\v{c}}, Mindaugas Margelevi{\v{c}}ius, and {\v{C}}eslovas
+  Venclovas.
+\newblock Voroprot: an interactive tool for the analysis and visualization of
+  complex geometric features of protein structure.
+\newblock {\em Bioinformatics}, 27(5):723--724, 2010.
+
 \bibitem{paramo2014efficient}
 Teresa Paramo, Alexandra East, Diana Garzón, Martin~B Ulmschneider, and
   Peter~J Bond.
@@ -275,6 +318,13 @@ Teresa Paramo, Alexandra East, Diana Garzón, Martin~B Ulmschneider, and
   simulation trajectories: trj\_cavity.
 \newblock {\em Journal of chemical theory and computation}, 10(5):2151--2164,
   2014.
+
+\bibitem{parulek2012implicit}
+Julius Parulek, Cagatay Turkay, Nathalie Reuter, and Ivan Viola.
+\newblock Implicit surfaces for interactive graph based cavity analysis of
+  molecular simulations.
+\newblock In {\em Biological Data Visualization (BioVis), 2012 IEEE Symposium
+  on}, pages 115--122. IEEE, 2012.
 
 \bibitem{patane2015state}
 Giuseppe Patan{\'e} and Michela Spagnuolo.

@@ -146,14 +146,32 @@ Accuracy of grid-based algorithms strongly depends on the resolution of the voxe
 
 Another set of void detection methods is based on theory of $\alpha$-shapes. First, they compute Voronoi diagram on the atoms of the protein in a same manner as previous methods and transform it to Delaunay triangulation. Than, all the triangles that do not lie completely inside the protein atoms are deleted, resulting in an $\alpha$-shape of the protein. The cavities can than be easily extracted from the $\alpha$-shape. This method was first used in CAST~\cite{liang1998anatomy} and was later extended and generalized by \cite{sridharamurthy2016extraction, kim2013tunnels, masood2015chexvis}.
 
-In Section \ref{Sec:surfaces} we have described several methods for extraction of molecular surfaces. Based on these methods, several \textit{surface-based} approaches for detection of cavities have been proposed. For example, Jurčík et al. \cite{jurvcik2016accelerated} extend the method proposed for computation of SES by Krone et al.~\cite{6094043} to detect also closed cavities. Coleman and Sharp \cite{Coleman2009CHUNNEL} use triangulation of SES to detect channels in proteins. Krone et al. \cite{krone2013interactive, krone2014visual} proposed a method for real time GPU accelerated extraction of cavities based on Ambient Occlusion. The LES method proposed by Lindow et al. \cite{lindow2014ligand} enables extraction of cavities based on the actual geometry of the ligand.
+In 2011 two new approaches \cite{olechnovivc2010voroprot, Lindow2011Voronoi} appeared using weighted \textit{Voronoi diagrams} of atom spheres in combination with \textit{probes}. For each Voronoi vertex of these diagrams an empty sphere tangent to four atom spheres exists. If the sphere is larger than a size of probe it is consider to be a cavity. Since this approach considers the atom radii, it produces geometrically optimal results for probe spheres.
+
+In Section \ref{Sec:surfaces} we have described several methods for extraction of molecular surfaces. Based on these methods, several \textit{surface-based} approaches for detection of cavities have been proposed. For example, Jurčík et al. \cite{jurvcik2016accelerated} extend the method proposed for computation of SES by Krone et al.~\cite{6094043} to detect also closed cavities. Coleman and Sharp \cite{Coleman2009CHUNNEL} use triangulation of SES to detect channels in proteins. Krone et al. \cite{krone2013interactive} proposed a method for real time GPU accelerated extraction of cavities based on Ambient Occlusion. The LES method proposed by Lindow et al. \cite{lindow2014ligand} enables extraction of cavities based on the actual geometry of the ligand.
 
 The tunnel detection can be alternatively viewed as a path planning problem -- the task is to find a collision free path for ligand starting at active site and leading to the surface. Path planning approaches to tunnel detection usually employ Rapidly Exploring Random Trees \cite{lavalle1998rapidly} (RRT), a technique that builds a tree of collision free configurations moving through the defined space. This approach can be applied directly on an MD simulation, thus it avoids the computationally expensive step of traditional, e.g. Voronoi-based approaches, where correspondence between geometry computed in different MD snapshots has to be found. Most notable work in this are includes \cite{cortes2005path, vonasek2016application, vonasek2017tunnel}.
 
 \subsection{Visual Analysis of Protein Tunnels}
+Spatial visual representations of molecular tunnels correspond to traditional molecular visualizations. The most simple tunnel representation consist of set of spheres placed along the tunnel centreline -- the radius of each sphere corresponds to the maximal probe that fits into the tunnel at given place without intersecting with molecular atoms. Optionally tunnel centreline can be displayed as well. 
+
+We have already mentioned several surface-based methods for cavity detection that consequently use surface visualization to depict the detected cavities. Those methods also propose visual enhancements to highlight the cavities within the context of molecule -- e.g. customized clipping planes, modulated coloring \cite{parulek2012implicit} or transparency of molecular srface \cite{jurvcik2016accelerated} or selective lighting \cite{Lindow2011Voronoi}. 
+
+Moreover, several systems interactively combine 3D view and abstracted 2D plots to support the analysis of detected tunnels. Lindow et al. \cite{Lindow2012DynamicChannels, Lindow2013DynamicCavities} proposed an interactive tool for analysis of changes in the cavities in molecular dynamics. The tool includes interactive relational graph, that plots the evolution of the position and size of the cavities, as well as their splits and merges. On demand it offers 3D overview of aggregated shaped of selected cavity traced through the MD simulation. Similar principles were also utilized by Krone et al. {krone2014visual}.
+
+Byška et al. \cite{byvska2016animoaminominer} presented a tool that combines line plot showing the tunnel width profile with a list of amino acids that influence the tunnel at different time steps of an MD simulation. By interaction it is possible to find the amino acids that might cause tunnel bottlenecks. Byška et al. \cite{byvska2015molecollar} also presented another tool for exploration of evolution of molecular tunnel. In this work they employed filterable heat maps to provide width overview for multiple detected tunnels as well as more detailed view based on tunnel cross-cuts which again plots surrounding amino acids. 
+
+Yet another approach to tunnel analysis was presented by Kolesár er al.~\cite{kolesar2016unfolding}. This work presents a method for comparison and analysis of tunnels based on unfolding of a 3D surface and flattening it into 2D map-like representation that denotes the amino acids surrounding the tunnel. These 2D representations can than be clustered and compared using image processing methods. 
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{pictures/tunnels.pdf} 
+  \caption{a) Relational graph by Lindow et al. \cite{Lindow2013DynamicCavities} b) AnimoAminoMiner\cite{byvska2016animoaminominer} c)MoleCollar \cite{byvska2015molecollar}, d) Tunnel unfolding by Koles8r et al. \cite{kolesar2016unfolding}.}
+  \label{Fig:tunnels}  
+\end{figure}
 
 
-ligand md simulations
+%ligand md simulations
 
 \section{Protein-Protein Interactions}
 
