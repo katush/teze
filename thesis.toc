@@ -21,7 +21,10 @@
 \contentsline {section}{\numberline {2.4}\slshape Analysis of Protein-Protein Interactions}{19}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}\rmfamily Protein-Protein Docking}{19}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}\rmfamily Visual Analysis of Protein-Protein Interactions}{21}{subsection.2.4.2}
-\contentsline {section}{\numberline {2.5}\slshape Available Software}{23}{section.2.5}
+\contentsline {section}{\numberline {2.5}\slshape Available Molecular Visualization Software}{23}{section.2.5}
 \contentsline {chapter}{\numberline {3}\bfseries Aims of the Thesis}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}\slshape Protein-Ligand Interactions}{25}{section.3.1}
+\contentsline {section}{\numberline {3.2}\slshape Protein-Protein Interactions}{25}{section.3.2}
+\contentsline {section}{\numberline {3.3}\slshape Study Plan}{25}{section.3.3}
 \contentsline {chapter}{\numberline {4}\bfseries Achieved Results}{27}{chapter.4}
 \contentsline {chapter}{\numberline {5}\bfseries Author's Publications}{29}{chapter.5}
