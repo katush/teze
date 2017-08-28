@@ -17,16 +17,17 @@ Although this thesis deals with the research in the field of visualization and v
 
 \subsection{Protein Structures}
 \label{Sec:structures}
-Proteins are complex molecules formed by one or more chains of amino acids. Amino acids are basic building blocks of all living organisms. There are approximately 500 known amino acids, but only 20 standard amino acids are encoded in genetic code. Each of them consists of \textit{carboxyl group} ($-COOH$), an \textit{amino group} ($-NH_2$) and a unique \textit{side chain} ($-R$) that defines its properties. The three groups are connected by a carbon atom, also called an \textit{alpha carbon} $C_\alpha$. See figure \ref{Fig:aa} a).
+Proteins are complex molecules formed by one or more chains of amino acids. Amino acids are basic building blocks of all living organisms. There are approximately 500 known amino acids, but only 20 standard amino acids are encoded in genetic code. Each of them consists of \textit{carboxyl group} ($-COOH$), an \textit{amino group} ($-NH_2$) and a unique \textit{side chain} ($-R$) that defines its properties. The three groups are connected by a carbon atom, also called an \textit{alpha carbon} $C_\alpha$. See figure \ref{Fig:aa} (A).
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{pictures/aminoacid.pdf} 
-  \caption{a) Illustration of a basic amino acid structure. b) Amino acid residues connected into polypeptide chain. It can be noted, that the amino and carboxyl groups are missing atoms, which were released during the formation of peptide bonds as $H_2O$ molecules.}
+  \subfigure[]{\includegraphics[width=0.37\textwidth]{pictures/aminoacid1.pdf} }
+  \subfigure[]{\includegraphics[width=0.55\textwidth]{pictures/aminoacid2.pdf} }
+  \caption{(A) Illustration of a basic amino acid structure. (B) Amino acid residues connected into polypeptide chain. It can be noted, that the amino and carboxyl groups are missing atoms, which were released during the formation of peptide bonds as $H_2O$ molecules.}
   \label{Fig:aa}
 \end{figure}
 
-During a protein synthesis amino acids are joined together by peptide bonds (covalent bonds), forming polypeptide chains. A peptide bond is formed in a reaction between carboxyl group of one amino acid and amino group of another amino acid (see figure \ref{Fig:aa} b)). As both groups loose atoms that are released as molecule of water during this reaction, the amino acids bonded in polypeptide chains are refereed to as \textit{amino acid residues}. 
+During a protein synthesis amino acids are joined together by peptide bonds (covalent bonds), forming polypeptide chains. A peptide bond is formed in a reaction between carboxyl group of one amino acid and amino group of another amino acid (see figure \ref{Fig:aa} (B)). As both groups loose atoms that are released as molecule of water during this reaction, the amino acids bonded in polypeptide chains are refereed to as \textit{amino acid residues}. 
 
 Each protein contains at least one long polypeptide chain. This sequence of amino acids, connected by rigid peptide bonds, also known as \textit{backbone}, forms \textit{primary structure} of the protein.
 
@@ -48,7 +49,7 @@ Example of this are the inner voids of the protein. When protein folds, there is
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.5\textwidth]{pictures/Voids.pdf} 
+  \includegraphics[width=.45\textwidth]{pictures/Voids.pdf} 
   \caption{Types of inner voids of protein. Image adapted from \cite{Strnad2014Thesis}}
   \label{Fig:voids}
 \end{figure}
@@ -74,7 +75,7 @@ Most of the proteins contain hydrophobic amino acids at their core, while their 
 So far, when discussing the properties of proteins, we have assumed the static 3D structure. However, due to constant physical forces taking place between millions of atoms of proteins and surrounding solvents, the structure of the protein is not static and when studying the proteins one has to consider so called \textit{molecular dynamics (MD)}. This term generally denotes the simulation or the captured interval of atom movement that constantly changes not only the shape but consequently also properties of observed proteins. 
 
 \section{Problem Formulation}
-Now that the reader is familiar with basic biochemical terminology, we can formulate the specific problems that will be the focus of this thesis. It was already hinted that proteins can participate in various kinds of intermolecular interactions. In this thesis we will focus on two typical types of interactions: a) protein-ligand interactions and b) protein-protein interactions.
+Now that the reader is familiar with basic biochemical terminology, we can formulate the specific problems that will be the focus of this thesis. It was already hinted that proteins can participate in various kinds of intermolecular interactions. In this thesis we will focus on two typical types of interactions: a) protein-ligand interactions (PLI) and b) protein-protein interactions (PPI).
 
 \subsection{Protein-Ligand Interactions} 
 In biochemical terminology ligand denotes a small molecule that binds to a protein, where the consequential reaction changes both, the target protein as well as the ligand itself. Analysis of protein-ligand docking (the act of ligand travelling through the protein tunnel and binding to the active site) has application in different fields of biochemistry such as protein engineering or drug design. The typical goal of protein engineering research is changing of protein properties by mutating some of its amino acids to make it, e.g. more stable under high temperature conditions or more reactive with a particular type of ligand. In drug design the goal is to find or adjust protein-ligand combinations, such that their mutual reaction would synthesize new drug from the ligand.
@@ -85,7 +86,7 @@ However, in both cases the researchers are looking for the answers to the follow
 \item{If not, which parts of the tunnels are causing problems?}
 \item{Is it the geometrical bottleneck, that prevents the ligand from passing through the tunnel?}
 \item{Are the physico-chemical properties of the tunnel amino acids responsible for repelling the ligand from the active site?}
-\item{Can these problems can be resolved by mutating the protein amino acids?}
+\item{Can these problems be resolved by mutating the protein amino acids?}
 \end{itemize}
 
 \begin{wrapfigure}{l}{0.4\textwidth}
@@ -103,6 +104,7 @@ However, in both cases the researchers are looking for the answers to the follow
 There is already great amount of published work aiming to answer these questions either by studying the tunnel properties or by directly simulating the transportation of the ligand to the active site. However, with the complexity of protein structures in combination with the ever-changing molecular dynamics, the answers are not trivial. Figure \ref{Fig:trajectory} for example depicts trajectory of a ligand in a MD simulation consisting of 50 000 time steps. It is apparent, that further analysis is necessary to identify significant parts and patterns in this simulation. 
 
 \subsection{Protein-Protein Interactions}
+\label{Sec:PPIproblem}
 Most of the proteins responsible for various functions in cellular life are operating in larger multi-protein complexes. For example a family of SMC complexes (structural maintenance of chromosomes) govern the organisation of DNA in the cell nucleus. However, in order to interpret their functions properly, it is vital to understand the way the protein are interacting together in these complexes. Mapping the \textit{contact zones} consisting of surface amino acids interacting between the proteins is time consuming process that requires expensive laboratory experiments. Several computational tools therefore aim to reduce the amount of necessary experiments by predicting the possible docking conformations of given proteins. These tools can produce tens to hundreds of possible solutions and it is than up to biochemists to identify the plausible ones. To determine this, the researchers are trying to answer following questions:
 
 \begin{itemize}
@@ -121,7 +123,7 @@ The identification of relevant docking conformations is currently not well suppo
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\linewidth]{pictures/problem.png} 
+  \includegraphics[width=0.45\linewidth]{pictures/problem.png} 
   \caption{Superposition of several possible conformations between two proteins. The set of green protein instances corresponds to one of the proteins in the interaction, the colored components represent the second protein in different conformations.}
   \label{Fig:problem}  
 \end{figure} 

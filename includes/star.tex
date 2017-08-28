@@ -6,11 +6,11 @@
 In this chapter we will present the state of the art work present in bioinformatical literature with regards to the visualization and analysis of proteins and their interactions with other molecules. We will start with overview of existing molecular visualization techniques, then continue with the work related to protein-ligand interactions, where literature covers a substantial amount of diverse research. The end of this chapter will be dedicated to protein-protein interactions. 
 
 \section{Molecular Visualization}
-Many different molecular representations have developed to cater for diverse needs of molecular biologists. Although some new representations are still emerging, the research in this area is currently more focused on development of fast visualization algorithms and GPU-based acceleration of traditional ones, in order to represent large and dynamic molecular data. Here we will provide the overview of typical molecular representations and they state of the art execution. There are, however, countless of other approaches that exceed the capacity of this work. The detailed study concerning molecular representation can be found in state of the art report by Kozlikova et al. \cite{kozlikova2015visualization}. Available is also the report by Patané and Spagnuolo focusing on modeling of molecular surfaces \cite{patane2015state}.
+Many different molecular representations have developed to cater for diverse needs of molecular biologists. Although some new representations are still emerging, the research in this area is currently more focused on development of fast visualization algorithms and GPU-based acceleration of traditional ones, in order to represent large and dynamic molecular data. Here we will provide the overview of typical molecular representations and they state of the art execution. There are, however, countless of other approaches that exceed the capacity of this work. The detailed study concerning molecular representation can be found in state of the art report by Kozlíková et al. \cite{kozlikova2015visualization}. Available is also the report by Patané and Spagnuolo focusing on modeling of molecular surfaces \cite{patane2015state}.
 
 \subsection{Atomistic and Bond-Centric Models}
-\begin{wrapfigure}{r}{0.33\textwidth} 
-\vspace{-65pt}
+\begin{wrapfigure}{r}{0.327\textwidth} 
+\vspace{-63pt}
   \begin{center}
   \includegraphics[width=0.65\linewidth]{pictures/04_hoffman.jpg} 
   \caption{Hoffman's methane (Marsh-gas) representation \cite{perkins2005history}.}
@@ -19,44 +19,49 @@ Many different molecular representations have developed to cater for diverse nee
   \vspace{-30pt}
 \end{wrapfigure}
 
-We can say that history of molecular visualization dates back to the 19th century. In 1808 John Dalton published his atomic theory~\cite{dalton1808new}, where he represented atoms and simple molecules with circular shapes. Couple of decades later, around 1860, August Wilhelm von Hoffmann started using first 3D models of molecules in his lectures at Royal Institution of Great Britain~\cite{perkins2005history} -- see Figure \ref{Fig:hoffman}. This type of molecular representation is called \textit{ball-and-stick} model, where balls represent atoms and sticks represent bonds between them. With couple of modifications this representation is commonly used also nowadays (Figure \ref{Fig:vis} b)). 
+We can say that history of molecular visualization dates back to the 19th century. In 1808 John Dalton published his atomic theory~\cite{dalton1808new}, where he represented atoms and simple molecules with circular shapes. Couple of decades later, around 1860, August Wilhelm von Hoffmann started using first 3D models of molecules in his lectures at Royal Institution of Great Britain~\cite{perkins2005history} -- see Figure \ref{Fig:hoffman}. This type of molecular representation is called \textit{ball-and-stick} model, where balls represent atoms and sticks represent bonds between them. With couple of modifications this representation is commonly used also nowadays (Figure \ref{Fig:vis} (B)). 
 
-Over the years other derivations of ball-and-stick model emerged. In 1959 André Dreiding introduced molecular modelling kit using \textit{stick-only} model~\cite{dreiding1959einfache}. Here the atoms were not represented by balls, but merely as connection points between sticks. Nowadays this model is called also \textit{liquorice} or \textit{Dreiding's model} (Figure \ref{Fig:vis} a)). The colouring of the sticks is often used to indicate atoms or their properties.
+Over the years other derivations of ball-and-stick model emerged. In 1959 André Dreiding introduced molecular modelling kit using \textit{stick-only} model~\cite{dreiding1959einfache}. Here the atoms were not represented by balls, but merely as connection points between sticks. Nowadays this model is called also \textit{liquorice} or \textit{Dreiding's model} (Figure \ref{Fig:vis} (A)). The colouring of the sticks is often used to indicate atoms or their properties.
 
-Although several researchers, including Dalton and Hoffman, claimed that different atoms have different radii, it wasn't until 1873 that the sizes of atoms were experimentally derived by Johannes Diderik van der Waals~\cite{Waals1873PhDThesis}. In later years this discovery led to so called \textit{space-filling} molecular representations, also called \textit{callote} or \textit{CPK models} after chemists Robert Corey, Linus Pauling, and Walter Koltun \cite{corey1953molecular}. In this representation, full "space-filling" sizes of atoms are used, which provides the overview of molecular surface (Figure \ref{Fig:vis} c)).
+Although several researchers, including Dalton and Hoffman, claimed that different atoms have different radii, it wasn't until 1873 that the sizes of atoms were experimentally derived by Johannes Diderik van der Waals~\cite{Waals1873PhDThesis}. In later years this discovery led to so called \textit{space-filling} molecular representations, also called \textit{callote} or \textit{CPK models} after chemists Robert Corey, Linus Pauling, and Walter Koltun \cite{corey1953molecular}. In this representation, full "space-filling" sizes of atoms are used, which provides the overview of molecular surface (Figure \ref{Fig:vis} (C)).
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{pictures/vis.pdf} 
-  \caption{Types of molecular representations in modern visualization tools: a) liquorice model b) ball-and-stick model c) space-filling model}
+  \subfigure[]{\includegraphics[width=0.32\linewidth]{pictures/al1.png}}
+  \subfigure[]{\includegraphics[width=0.32\linewidth]{pictures/al2.png}}
+  \subfigure[]{\includegraphics[width=0.32\linewidth]{pictures/al3.png}}
+  \caption{Types of molecular representations in modern visualization tools: (A) liquorice model (B) ball-and-stick model (C) space-filling model}
   \label{Fig:vis}  
 \end{figure} 
 
-Atom and bond based representations of molecules can be decomposed into primitive shapes such as spheres and cylinders, which makes them suitable for GPU-based ray casting. Most of the state of the art rendering techniques stem from glyph ray casting introduce by Gumhold et al. \cite{gumhold2003splatting}, however many performance speedups focusing on rendering of large dynamic molecular structures exist. Since these techniques are focusing on large data samples, they often utilize level of detail (LOD) strategies. Example of this can be the two-level approach of Lampe et al. \cite{lampe2007two} where residues are each residue is represented by one vertex and the atoms in the residues are generated on-the-fly on the GPU. Another approach is used by Le Muzic et al. \cite{le2014illustrative}, where atom positions are stored in a texture and reconstructed using tessellation and geometry shaders.
+Atom and bond based representations of molecules can be decomposed into primitive shapes such as spheres and cylinders, which makes them suitable for GPU-based ray casting. Most of the state of the art rendering techniques stem from glyph ray casting introduce by Gumhold et al. \cite{gumhold2003splatting}, however many performance speedups focusing on rendering of large dynamic molecular structures exist. Since these techniques are focusing on large data samples, they often utilize level of detail (LOD) strategies. Example of this can be the two-level approach of Lampe et al. \cite{lampe2007two} where each residue is represented by one vertex and the atoms in the residues are generated on-the-fly on the GPU. Another approach is used by Le Muzic et al. \cite{le2014illustrative}, where atom positions are stored in a texture and reconstructed using tessellation and geometry shaders.
 
 \subsection{Protein Architecture}
 The afore mentioned representations of molecules provide detail information about arrangement of atoms in a molecule. However, for proteins, which can consist of thousands of atoms, this representations can be too cluttered. Therefore, several schematic visualizations were developed.
 
-One of the simplest representations of protein structure is called \textit{alpha trace}. It depicts only the backbone of the protein, as it is derived from the positions of $\alpha$-carbons (Figure \ref{Fig:vis2} a)). This representation provides coarse overview of tertiary and quaternary structure of the protein -- spatial arrangement of the polypeptide chains. However, it can be difficult to identify secondary structures from the alpha trace.
+One of the simplest representations of protein structure is called \textit{alpha trace}. It depicts only the backbone of the protein, as it is derived from the positions of $\alpha$-carbons (Figure \ref{Fig:vis2} (A)). This representation provides coarse overview of tertiary and quaternary structure of the protein -- spatial arrangement of the polypeptide chains. However, it can be difficult to identify secondary structures from the alpha trace.
+\vspace{-10pt}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{pictures/representations.pdf} 
-  \caption{Types of molecular representations in modern visualization tools: a) alpha trace b) ribbon diagrams}
+  \subfigure[]{\includegraphics[width=0.35\linewidth]{pictures/representations1.png} }
+  \subfigure[]{\includegraphics[width=0.35\linewidth]{pictures/representations2.png} }
+  \vspace{-10pt}
+  \caption{Types of molecular representations in modern visualization tools: (A) alpha trace (B) ribbon diagrams}
   \label{Fig:vis2}  
 \end{figure} 
 
-In 1981 Jane S. Richardson published \textit{cartoon} illustrations of all then known protein structures \cite{richardson1981anatomy}. In these schematic representations, known today as \textit{ribbon diagrams}, she used consistent and intuitive illustrations of secondary structures to demarcate their position along protein backbone. Although ribbon diagrams were originally hand drawn, they are nowadays part of every molecular visualization software (Figure \ref{Fig:vis2} b)).
+In 1981 Jane S. Richardson published \textit{cartoon} illustrations of all then known protein structures \cite{richardson1981anatomy}. In these schematic representations, known today as \textit{ribbon diagrams}, she used consistent and intuitive illustrations of secondary structures to demarcate their position along protein backbone. Although ribbon diagrams were originally hand drawn, they are nowadays part of every molecular visualization software (Figure \ref{Fig:vis2} (B)).
 
 Currently the fastes approaches to visualization of ribbon diagrams include the two stage approach by Wahle and Birmanns \cite{wahle2011gpu} where first the backbone tube is generated on CPU and than the vertices are adjusted on GPU to form the final geometry. Another adaptive method by Hermosilla et al. \cite{hermosilla2015instant} takes advantage of the tessellation shader and generates only the geometry needed for current viewpoint.
 
 \subsection{Surface Representations}
 \label{Sec:surfaces}
-These representations communicate the internal structure of the protein. However in many cases the focus of interest is on the surface of the protein, since the surface is the part of protein that is in contact with outer environment. It is therefore important for biochemists to identify the boundaries of the proteins that are accessible to ligands or interacting with other proteins.
+These representations communicate the internal structure of the protein. However in many cases the focus of interest is on the surface of the protein, since the surface is the part of the protein that is in contact with outer environment. It is therefore important for biochemists to identify the boundaries of the proteins that are accessible to ligands or interacting with other proteins.
 
-We have already mentioned one type of surface defined by atom spheres of van der Walls radii and therefore called \textit{van der Waals (vdW) surface} \cite{richards1977areas} -- Figure~\ref{Fig:surface} (blue). This surface indicates the precise molecular volume (Figure \ref{Fig:simple} a)).
+We have already mentioned one type of surface defined by atom spheres of van der Walls radii and therefore called \textit{van der Waals (vdW) surface} \cite{richards1977areas} -- Figure~\ref{Fig:surface} (blue). This surface indicates the precise molecular volume (Figure \ref{Fig:surface2} (A)).
 
-Another type of surface -- \textit{solvent accesible surface (SAS)} was developed to show the regions of molecule accesible by a solvent molecules \cite{lee1971interpretation}. Here, the solvent molecule is approximated by a spherical probe, which rolls rolls over the vdW surface. The center of the probe than defines the SAS surface -- Figure~\ref{Fig:surface} (yellow). In other words, solvent accesible surface is equal to a vdW surface inflated by the radius of probe.
+Another type of surface -- \textit{solvent accesible surface (SAS)} was developed to show the regions of molecule accesible by solvent molecules \cite{lee1971interpretation}. Here, the solvent molecule is approximated by a spherical probe, which rolls over the vdW surface. The center of the probe than defines the SAS surface -- Figure~\ref{Fig:surface} (yellow). In other words, solvent accesible surface is equal to a vdW surface inflated by the radius of probe.
 
 \begin{wrapfigure}{l}{0.5\textwidth} 
 \vspace{-20pt}
@@ -68,47 +73,57 @@ Another type of surface -- \textit{solvent accesible surface (SAS)} was develope
 \vspace{-20pt}
 \end{wrapfigure}
 
-\textit{Solvent excluded surface (SES)} \cite{richards1977areas} is defined in similar manner to SAS. However, instead of the center of the probe, its outer shell defines the surface -- Figure~\ref{Fig:surface} (red). It was the first smooth surface defined and thanks to the close approximation of molecular volume it is one of the most used surface representations (Figure \ref{Fig:simple} b)). Many algorithms for its computation and visualization have been developed over the years. Currently the fastest soulutions include paralelization of contour-buildap algorithm \cite{totrov1996contour} -- algorithm that computes track of the probe on atom surfaces -- by Lindow et al. \cite{lindow2010accelerated} and Krone et al. \cite{6094043} as well as a grid-based approach by Hermosilla at al. \cite{hermosilla2017interactive} that utilizes progressive surface refinement for rendering of dynamic models on the fly.
+\textit{Solvent excluded surface (SES)} \cite{richards1977areas} is defined in similar manner to SAS. However, instead of the center of the probe, its outer shell defines the surface -- Figure~\ref{Fig:surface} (red). It was the first smooth surface defined and thanks to the close approximation of molecular volume it is one of the most used surface representations (Figure \ref{Fig:surface2} (B)). Many algorithms for its computation and visualization have been developed over the years. Currently the fastest soulutions include paralelizations of contour-buildup algorithm \cite{totrov1996contour} -- algorithm that computes track of the probe on each atom surfaces -- by Lindow et al. \cite{lindow2010accelerated} and Krone et al. \cite{6094043} as well as a grid-based approach by Hermosilla at al. \cite{hermosilla2017interactive} that utilizes progressive surface refinement for rendering of dynamic models on the fly.
 
-\textit{Ligand exluded surface (LES)} is a relatively new generalization of SES proposed by Lindow et al. \cite{lindow2014ligand}. Instead of using an approximate probe, it uses full geometry of ligand to generate the surface. It thus illustrates the precise accessibility, however it is very computationally demanding (Figure \ref{Fig:simple} c)).
+\textit{Ligand exluded surface (LES)} is a relatively new generalization of SES proposed by Lindow et al. \cite{lindow2014ligand}. Instead of using an approximate probe, it uses full geometry of ligand to generate the surface. It thus illustrates the precise accessibility of molecule, however it is very computationally demanding and therefore unusable for illustration of dynamic changes (Figure \ref{Fig:surface2} (C)).
 
-Yet another type of molecular surface -- \textit{molecular skin surface (MSS)} was proposed by Edelsbrunner \cite{edelsbrunner1999deformable} (Figure \ref{Fig:simple} c)). The shape of MSS depends on the single parameter \textit{s} -- shrink factor. The advantage of MSS over SES is full $C^1$ continuity.  Among the fastest aproaches to generation of MSS belong the ones by Lindow et al. \cite{lindow2010accelerated} and Yan et al. \cite{Yan2017}.
+Yet another type of molecular surface -- \textit{molecular skin surface (MSS)} was proposed by Edelsbrunner \cite{edelsbrunner1999deformable} (Figure \ref{Fig:surface2} (D)). The shape of MSS depends on the single parameter \textit{s} -- shrink factor. The advantage of MSS over SES is full $C^1$ continuity.  Among the fastest aproaches to generation of MSS belong the ones by Lindow et al. \cite{lindow2010accelerated} and Yan et al. \cite{Yan2017}.
 
 In 1982 Blinn \cite{blinn1982generalization} proposed use of a Gaussian convolution
-kernel to blend atom potentials to achieve an approximation of molecular surface. This technique callled \textit{convolution surface model (CSM)} is more commonly known as Metaballs (Figure \ref{Fig:simple} e)). As with other techniques, improvements and new kernels have been proposed over the years (e.g. by Krone et al. \cite{krone2012fast}) and the resulting techniques belong to the fastest surface rendering approaches. 
+kernel to blend atom potentials to achieve an approximation of molecular surface. This technique called \textit{convolution surface model (CSM)} is more commonly known as Metaballs (Figure \ref{Fig:surface2} (E)). As with other techniques, improvements and new kernels have been proposed over the years (e.g. by Krone et al. \cite{krone2012fast}) and the resulting techniques belong to the fastest surface rendering approaches. 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{pictures/surface2.pdf} 
-  \caption{Comparison between different molecular surfaces of the protein isomerase: a) vdW surface b) SES with probe radius 1:4 Å c) LES for equilenine d) MSSwith shrink factor 0.35 e) Gaussian surface with standard deviation equal to the atom radius. Image taken from \cite{kozlikova2015visualization}.}
+  \subfigure[]{\includegraphics[width=0.19\linewidth]{pictures/surface21.png}}
+  \subfigure[]{\includegraphics[width=0.19\linewidth]{pictures/surface22.png}}
+  \subfigure[]{\includegraphics[width=0.19\linewidth]{pictures/surface23.png}}
+  \subfigure[]{\includegraphics[width=0.19\linewidth]{pictures/surface24.png}}
+  \subfigure[]{\includegraphics[width=0.19\linewidth]{pictures/surface25.png}}
+  \caption{Comparison between different molecular surfaces: (A) vdW surface (B) SES with probe radius 1:4 Å (C) LES for equilenine (D) MSSwith shrink factor 0.35 (E) Gaussian surface with standard deviation equal to the atom radius. Image taken from \cite{kozlikova2015visualization}.}
   \label{Fig:surface2}  
 \end{figure}
 
 \subsubsection{Surface Simplification}
 With larger kernels, the CMS can be used for simplification of molecular surface, showing just the general shape of the protein. This is sometimes required, as molecular surfaces are often used for mapping of other properties of proteins and atomistic models with many occlusions and high visual complexity are not suitable for this purpose.
 
-Couple of other approaches for surface simplification have been proposed. \textit{Coarse graining} \cite{levitt1976simplified} is method that groups several atoms (e.g. one amino acids) together. These groups are than represented by single sphere. Another approach is mapping the molecular surface to spherical coordinates \cite{postarnakevich2009global}.
+Couple of other approaches for surface simplification have been proposed as well. \textit{Coarse graining} \cite{levitt1976simplified} is method that groups several atoms (e.g. one amino acids) together. These groups are than represented by a single sphere. Another approach is mapping of the molecular surface to spherical coordinates \cite{postarnakevich2009global}. Multiple surfaces can be easily compared with this approach.
 
 \begin{wrapfigure}{l}{0.5\textwidth} 
-\vspace{-10pt}
+\vspace{-20pt}
   \begin{center}
-  \includegraphics[width=0.95\linewidth]{pictures/simpl.pdf} 
-  \caption{Simplified surface representation proposed by Cipriano and Gleicher. a) SES b) simplified surface. Image taken from \cite{cipriano2007molecular}.}
+  \subfigure[]{\includegraphics[width=0.47\linewidth]{pictures/simpl1.png} }
+  \subfigure[]{\includegraphics[width=0.47\linewidth]{pictures/simpl2.png} }  
+  \vspace{-7pt}
+  \caption{Simplified surface representation proposed by Cipriano and Gleicher. (A) SES (B) simplified surface. Image taken from \cite{cipriano2007molecular}.}
   \label{Fig:simple}  
 	\end{center}
   \vspace{-30pt}
 \end{wrapfigure}
 
-Cipriano and Gleicher \cite{cipriano2007molecular} proposed a method that uses a combination of
-filters and mesh restructuring to smooth the low frequency parts of the surface and generate a simplified representation of overall shape of the protein (see Figure \ref{Fig:simple}). Markings are then placed on the surface to indicate the important removed details as well as other features of the surface, such as the physico-chemical properties of surface amino acids.
+Cipriano and Gleicher \cite{cipriano2007molecular} proposed a method that uses a combination of filters and mesh restructuring to smooth the low frequency parts of the surface and generate a simplified representation of overall shape of the protein (see Figure \ref{Fig:simple}). Markings are then placed on the surface to indicate the important removed details as well as other features of the surface, such as the physico-chemical properties of surface amino acids.
+
+\vspace{-10pt}
 
 \subsubsection{Visual Enhancements}
-Another way of dealing with high visual complexity of molecular structures is introduction various visual enhancements. One the most employed visual cues in molecular rendering is certainly \textit{ambient occlusion (AO)} \cite{miller1994efficient}. The goal of this technique is to calculate, how each object in the scene is exposed to the ambient lighting. It is computationaly very expensive, however the latest results from Hermosilla et al. \cite{hermosilla2016high} enable real time rendering of AO for MD simulations.
+Another way of dealing with high visual complexity of molecular structures is introduction of various visual enhancements. One the most employed visual cues in molecular rendering is certainly \textit{ambient occlusion (AO)} \cite{miller1994efficient}. The goal of this technique is to calculate, how each object in the scene is exposed to the ambient lighting. It is computationaly very expensive, however the latest results from Hermosilla et al. \cite{hermosilla2016high} enable real time rendering of AO for MD simulations.
 
-In their work, they also cover rendering of another common effect -- \textit{halos}. Haloes are highlights extending from selected object boundaries (used e.g. to indicate ligand in an MD simulation). Similar to them are also \textit{depth-dependent silhouettes}, that contour the edges  detected from scene depth map. Another effect for guidance of attention was adapted from photography -- \textit{Depth of Field} simulation blurs the objects that are out of focus. 
-Other rendering techniques, such as \textit{toon shading}, \textit{line drawing} and \textit{hatching} are commonly used for molecular rendering as well, since they can be adjusted to emphasize important features \cite{kozlikova2015visualization}.
+In their work, Hermosilla et al. also cover rendering of another common effect -- \textit{halos}. Haloes are highlights extending from selected object boundaries (used e.g. to indicate ligand in an MD simulation). Similar to them are also \textit{depth-dependent silhouettes}, that contour the edges  detected from scene depth map. Another effect for guidance of attention was adapted from photography -- \textit{Depth of Field} simulation blurs the objects that are out of focus. 
+Lastly, various general rendering techniques, such as \textit{toon shading}, \textit{line drawing} and \textit{hatching} are commonly used for molecular rendering as well, since they can be adjusted to emphasize important features \cite{kozlikova2015visualization}.
 
-%\subsection{Molecular Visualization Systems}
+\section{Molecular Dynamics Simulations}
+We have written before that for proper understanding of protein function and processes where proteins are participating, one has to consider their internal dynamics. In general, it can be said that the intricate physical and chemical processes causing the internal changes of molecules are based on minimization of the potential energy between the molecular particles. Computer simulations mimic these processes are currently able to predict couple of milliseconds of these movements in reasonable time. Resulting MD simulations consist of thousands of snapshots capturing the state of the molecule in an individual time steps.
+
+MD simulations are used for numerous purposes -- e.g. refinement of experimentally obtained structures from X-ray crystallography, simulation of protein folding or modelling of protein-ligand docking. For the purposes of examining protein-ligand docking, two basic types of MD simulation are commonly used  -- Steered Molecular Dynamics (SMD) \cite{isralewitz2001steered} or Random Acceleration Molecular Dynamics (RAMD) \cite{ludemann2000substrates}. In these simulations an artificial forces are added in order to speed up the docking and obtain the results in a reasonable time. These can than be used either as an input for detection of protein voids or for simulation of ligand binding in detected cavities. 
 
 \section{Analysis of Protein Voids}
 We have described many possible representations that support the analysis of proteins in general. In this section, we will focus on one of the most important features of proteins -- their inner voids. As we mentioned before, the active site -- the reactive area of the protein is often buried deeply inside of the protein structure and accessible only via those voids, namely tunnels. Therefore, the extraction and analysis of these tunnels is vital for the study of protein-ligand binding. Here, we will mention only several most videly used principles of the approaches used in this area, as the extensiveness of this work exceeds the capacity of this thesis. Complete overview of the published tools for detection and analysis of biomolecular cavities can be found in state of the art reports by Krone et al. \cite{krone2016visual} and Simões et al. \cite{simoesgeometric}.
@@ -117,31 +132,35 @@ We have described many possible representations that support the analysis of pro
 There are several methods for extracting the shape of the protein voids in general, as well as numerous ones focusing on tunnels specifically. The algorithms can be classified into several categories, depending on the approach they use: grid-based, probe-based, Voronoi-based, surface-based, path analysis and ligand based. Most of the algorithms combine several approaches, in order to achieve better results. Moreover, we can differentiate  between algorithms applicable only for static structures and algorithms taking into account molecular dynamics.
 
 Many algorithms for void detection use a voxel grid to subdivide the 3D space containing the protein. The basic ide of purely \textit{grid-based approaches} is to split voxels into two groups -- those that lie inside a protein atoms and those that lie in a void space. 
-The grid points from the second group are then assigned value based on different properties -- distance to the protein atoms (\cite{levitt1992pocket, Petrek2006Caver, hendlich1997ligsite}), interaction energies (\cite{an2005pocketome, laurie2005q, hernandez2009sitehound}) or protein and solvent 
-\begin{wrapfigure}{r}{0.5\textwidth}
-\vspace{-17pt}
+The grid points from the second group are then assigned value based on different properties -- distance to the protein atoms (\cite{levitt1992pocket, Petrek2006Caver, hendlich1997ligsite}), interaction energies (\cite{an2005pocketome, laurie2005q, hernandez2009sitehound}) or protein and solvent residence probability extracted from MD simulation (\cite{raunest2011dxtuber, krone2011interactive, kokh2013trapp, paramo2014efficient}). The evaluated grid is further processed to extract the cavities using e.g. flood-fill segmentation or path analysis to find the cheapest path from active site to the surface of the protein.
+
+\begin{wrapfigure}{l}{0.5\textwidth}
+\vspace{-30pt}
   \begin{center}
-  \includegraphics[width=\linewidth]{pictures/rollingprobe.pdf} 
-  \caption{Rolling probe method. a) Two kinds of probes are placed in each point of the grid. b) The identified volumes are divided into the protein surrounding (light blue), and internal voids (red). Dark blue areas indicate undetected internal volume. Image adapted from \cite{brezovsky2013software}.}
+  \subfigure[]{\includegraphics[width=0.47\linewidth]{pictures/rollingprobe1.png} }
+  \subfigure[]{\includegraphics[width=0.47\linewidth]{pictures/rollingprobe2.png} }
+  \vspace{-5pt}
+  \caption{Rolling probe method. (A) Two kinds of probes are placed in each point of the grid. (B) The identified volumes are divided into the protein surrounding (light blue), and internal voids (red). Dark blue areas indicate undetected internal volume. Image adapted from \cite{brezovsky2013software}.}
   \label{Fig:rollingprobe}  
 	\end{center}
-  \vspace{-25pt}
+  \vspace{-10pt}
 \end{wrapfigure}
-residence probability extracted from MD simulation (\cite{raunest2011dxtuber, krone2011interactive, kokh2013trapp, paramo2014efficient}). The evaluated grid is further processed to extract the cavities using e.g. flood-fill segmentation or path analysis to find the cheapest path from active site to the surface of the protein.
+
 %An exaple of a \textit{grid-based approach} that also utilizes \textit{path analysis} is the first version of CAVER algorithm \cite{Petrek2006Caver}. Here, each node of the grid is assigned a cost, based on the maximal radius of a hypothetical ball that can be inserted into a node without intersecting voxels occupied by protein atoms -- the larger the radius, the lower the cost. A graph searching algorithm than searches for cheapest path leading from user defined active site to the outer boundary of protein. This path is than taken as tunnel centreline and the detected tunnel is tan represented as a set of maximal spheres placed on centreline.
 
 Second group of algorithms utilizes \textit{grid-based approaches} in combination with  \textit{probe-based approaches}. For example, HOLLOW \cite{Ho2008Hollow} and 3V \cite{voss20103v} algorithms use two probe spheres of different sizes that are placed in each node of the grid (see Figure \ref{Fig:rollingprobe}). The probes that do not intersect with protein atoms define the surface of the protein -- large probe defines the outer surface, while the smaller one defines also the inner voids. This approach is also referred to as \textit{rolling probe} principle. Different combinations probe-based and grid-based approaches can be found e.g. in \cite{kleywegt1994detection, czirjak2015princces, laskowski1995surfnet, yu2009roll}.
 
-\begin{wrapfigure}{l}{0.6\textwidth}
-\vspace{-17pt}
+\begin{wrapfigure}{l}{0.5\textwidth}
+\vspace{-37pt}
    \begin{center}
-  \includegraphics[width=\linewidth]{pictures/voronoi.pdf} 
-  \caption{Example of Voronoi-based tunnel detection. a) Evaluated edges. b) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from~ \cite{caver20}}
+   \subfigure[]{\includegraphics[width=0.47\linewidth]{pictures/voronoi1.pdf} }
+   \subfigure[]{\includegraphics[width=0.47\linewidth]{pictures/voronoi2.pdf} }
+  \vspace{-5pt}
+  \caption{Example of Voronoi-based tunnel detection. (A) Evaluated edges. (B) Path with highest score found by Dijkstra's algorithm. Red square indicates active site. Image adapted from~ \cite{caver20}}
   \label{Fig:voronoi} 
    \end{center} 
-   \vspace{-17pt}
+   \vspace{-20pt}
 \end{wrapfigure} 
-
 Accuracy of grid-based algorithms strongly depends on the resolution of the voxel grid. At the same time, high resolution of the grid leads to high memory demands of these algorithms. \textit{Voronoi-based} algorithms in combination with \textit{path analysis} address these drawbacks by utilizing Voronoi diagrams to subdivide the 3D space of protein structure (see Figure \ref{Fig:voronoi}). Each atom of the protein forms a center of Voronoi cell. The edges are then evaluated by cost function, which assigns the value based on distance of the edge from the cell centres (i.e. atom centres). Then, Dijkstra's algorithm is used on the edge graph to find the best path from the active site towards protein surface. This principle is used and improved upon in \cite{Petrek2007MOLE, caver20, Yaffe2008MolAxis}. Chovancova et al.~\cite{caver30} extend this approach for detection of tunnels taking into account the movement of the protein in CAVER 3.0 algorithm. It computes tunnel paths for each time frame of MD simulation. Than the corresponding paths are clustered. Thus it is possible to track the evolution of the tunnels in time.
 
 Another set of void detection methods is based on theory of $\alpha$-shapes. First, they compute Voronoi diagram on the atoms of the protein in a same manner as previous methods and transform it to Delaunay triangulation. Than, all the triangles that do not lie completely inside the protein atoms are deleted, resulting in an $\alpha$-shape of the protein. The cavities can than be easily extracted from the $\alpha$-shape. This method was first used in CAST~\cite{liang1998anatomy} and was later extended and generalized by \cite{sridharamurthy2016extraction, kim2013tunnels, masood2015chexvis}.
@@ -152,28 +171,106 @@ In Section \ref{Sec:surfaces} we have described several methods for extraction o
 
 The tunnel detection can be alternatively viewed as a path planning problem -- the task is to find a collision free path for ligand starting at active site and leading to the surface. Path planning approaches to tunnel detection usually employ Rapidly Exploring Random Trees \cite{lavalle1998rapidly} (RRT), a technique that builds a tree of collision free configurations moving through the defined space. This approach can be applied directly on an MD simulation, thus it avoids the computationally expensive step of traditional, e.g. Voronoi-based approaches, where correspondence between geometry computed in different MD snapshots has to be found. Most notable work in this are includes \cite{cortes2005path, vonasek2016application, vonasek2017tunnel}.
 
-\subsection{Visual Analysis of Protein Tunnels}
+\subsection{Visual Analysis of Protein Voids}
 Spatial visual representations of molecular tunnels correspond to traditional molecular visualizations. The most simple tunnel representation consist of set of spheres placed along the tunnel centreline -- the radius of each sphere corresponds to the maximal probe that fits into the tunnel at given place without intersecting with molecular atoms. Optionally tunnel centreline can be displayed as well. 
 
-We have already mentioned several surface-based methods for cavity detection that consequently use surface visualization to depict the detected cavities. Those methods also propose visual enhancements to highlight the cavities within the context of molecule -- e.g. customized clipping planes, modulated coloring \cite{parulek2012implicit} or transparency of molecular srface \cite{jurvcik2016accelerated} or selective lighting \cite{Lindow2011Voronoi}. 
+Alternatively, we have mentioned several surface-based methods for cavity detection that consequently use surface visualization to depict the detected cavities. Those methods also propose visual enhancements to highlight the cavities within the context of molecule -- e.g. customized clipping planes, coloring \cite{parulek2012implicit}, modulated transparency of molecular srface \cite{jurvcik2016accelerated} or selective lighting \cite{Lindow2011Voronoi}. 
 
-Moreover, several systems interactively combine 3D view and abstracted 2D plots to support the analysis of detected tunnels. Lindow et al. \cite{Lindow2012DynamicChannels, Lindow2013DynamicCavities} proposed an interactive tool for analysis of changes in the cavities in molecular dynamics. The tool includes interactive relational graph, that plots the evolution of the position and size of the cavities, as well as their splits and merges. On demand it offers 3D overview of aggregated shaped of selected cavity traced through the MD simulation. Similar principles were also utilized by Krone et al. {krone2014visual}.
+\begin{wrapfigure}{l}{0.5\textwidth}
+\vspace{-15pt}
+  \begin{center}
+  \includegraphics[width=\linewidth]{pictures/tunnels1.png}
+  \caption{Relational graph showing evolution of cavities by Lindow et al.~\cite{Lindow2013DynamicCavities}.}
+  \label{Fig:tunnels1}
+  \end{center}  
+  \vspace{-15pt}
+\end{wrapfigure}
 
-Byška et al. \cite{byvska2016animoaminominer} presented a tool that combines line plot showing the tunnel width profile with a list of amino acids that influence the tunnel at different time steps of an MD simulation. By interaction it is possible to find the amino acids that might cause tunnel bottlenecks. Byška et al. \cite{byvska2015molecollar} also presented another tool for exploration of evolution of molecular tunnel. In this work they employed filterable heat maps to provide width overview for multiple detected tunnels as well as more detailed view based on tunnel cross-cuts which again plots surrounding amino acids. 
+Moreover, several systems interactively combine 3D view and abstracted 2D plots to support the analysis of detected tunnels. Lindow et al. \cite{Lindow2012DynamicChannels, Lindow2013DynamicCavities} proposed an interactive tool for analysis of changes in the cavities in molecular dynamics. The tool includes interactive relational graph (Figure \ref{Fig:tunnels1}),
+that plots the evolution of the position and size of the cavities, as well as their splits and merges. On demand it offers 3D overview of aggregated shaped of selected cavity traced through the MD simulation. Similar principles -- 3D view, relational graph and line graphs mapping evolution of several properties -- were also utilized by Krone et al.~\cite{krone2014visual}. Also Prulek at al. \cite{parulek2013visual} combine 3D view with several linked 2D scatterplots in order to facilitate the analysis of cavity evolution in time.
 
-Yet another approach to tunnel analysis was presented by Kolesár er al.~\cite{kolesar2016unfolding}. This work presents a method for comparison and analysis of tunnels based on unfolding of a 3D surface and flattening it into 2D map-like representation that denotes the amino acids surrounding the tunnel. These 2D representations can than be clustered and compared using image processing methods. 
+Byška et al. presented two tools for exploration of protein tunnels based on 2D abstraction: MoleCollar \cite{byvska2015molecollar} employs filterable heat maps to provide width overview for multiple detected tunnels. It also provides detailed view which aggregates tunnel cross-cuts at a place of interest (e.g. geometrical bottleneck) during the MD simulation and plots the amino acids surrounding the given part of the tunnel  colored by their physico-chemical properties (Figure \ref{Fig:tunnels2} (A)). AnimoAminoMiner \cite{byvska2016animoaminominer} is a tool that combines line plot showing the tunnel width profile with a list of amino acids that influence the tunnel at different time steps of an MD simulation (Figure \ref{Fig:tunnels2} (B)). By interaction with these tools it is possible to identify the amino acids that might cause tunnel bottlenecks.
 
-\begin{figure}[t]
+\begin{figure}[h]
   \centering
-  \includegraphics[width=\linewidth]{pictures/tunnels.pdf} 
-  \caption{a) Relational graph by Lindow et al. \cite{Lindow2013DynamicCavities} b) AnimoAminoMiner\cite{byvska2016animoaminominer} c)MoleCollar \cite{byvska2015molecollar}, d) Tunnel unfolding by Koles8r et al. \cite{kolesar2016unfolding}.}
-  \label{Fig:tunnels}  
+  \subfigure[]{\includegraphics[width=0.3\linewidth]{pictures/tunnels3.pdf} }  
+  \hspace{0.07\linewidth}
+  \subfigure[]{\includegraphics[width=0.60\linewidth]{pictures/tunnels2.pdf}}
+  \caption{(A) MoleCollar showing temporal evolution of tunnel bottleneck via cross-cuts \cite{byvska2015molecollar}. (B) AnimoAminoMiner showing tunnel widthprofile and surrounding amino acids \cite{byvska2016animoaminominer}.}
+  \label{Fig:tunnels2}  
 \end{figure}
 
+\begin{wrapfigure}{r}{0.4\textwidth}
+\vspace{-30pt}
+  \begin{center}
+  \includegraphics[width=\linewidth]{pictures/tunnels4.pdf}
+  \vspace{-20pt}
+  \caption{Tunnel unfolding by Kolesár et al. \cite{kolesar2016unfolding}.}
+  \label{Fig:tunnels3}
+  \end{center}  
+  \vspace{-25pt}
+\end{wrapfigure} 
 
-%ligand md simulations
+Different approach to tunnel analysis was recently presented by Kolesár er al.~\cite{kolesar2016unfolding}. This work introduces a method for comparison and analysis of tunnels based on unfolding of a 3D surface and flattening it into 2D map-like representation that denotes the amino acids surrounding the tunnel (Figure \ref{Fig:tunnels3}). These 2D representations can than be clustered and compared using image processing methods. 
 
-\section{Protein-Protein Interactions}
+\section{Analysis of Protein-Protein Interactions}
+We have described the basic principles for analysis of protein-ligand interactions -- MD simulations and detection and analysis of protein voids. Related to this is the interaction of proteins in a multi-protein complexes. 
 
-\subsection{Docking}
-\subsection{Visual Analysis}
+\subsection{Protein-Protein Docking}
+Much like the MD simulations and cavity detection aid the protein-ligand docking analysis, there exist several computational approaches to prediction of protein-protein docking. Again we will only outline their basic principles. More in depth study of individual tools and approaches was conducted in 2014 by Huang \cite{huang2014search}.
+
+The first category consists of methods using an \textit{exhaustive global search} algorithms, where one protein (reference protein $P_{ref}$) is fixed and the second protein (pair protein $P_{pair}$) is moved around the first one in different position (3 degrees of freedom) and rotations (3 degrees of freedom). These approaches usually use grid-based representations of the proteins and a shape complementarity scoring function based on the grid overlaps in different positions. Such an approach requires enormous computational resources. However, there is a number of tools that utilize FFT-based acceleration for the sampling in translational space, reducing the computational time from $O (N^6)$ to $O(N^3 log(N^3))$. These include for example $F^2$Dock~\cite{bajaj2011f}, Cell-Dock~\cite{pons2012cell} or DOT2~\cite{roberts2013dot2}.
+
+The second category of algorithms utilizes \textit{local shape feature matching}. In these approaches, proteins are represented by a surface (usually SES) and then the algorithms search for those matches that give a good local shape complementarity between two proteins. Example of this is geometry hashing from PatchDock\cite{schneidman2005patchdock}, where first local features such as knobs (convex patches), holes (concave patches) and flat patches are detected on the surface and the hashing is used to match the patches that fit together -- see Figure \ref{Fig:hashing}.
+
+\begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=0.6\linewidth]{pictures/geometryhash.pdf}
+  \caption{Geometric hashing used in PatchDock. Image adapted from~ \cite{huang2014search}.}
+  \label{Fig:hashing}  
+ \end{center}  
+\end{figure}
+
+Another group is formed by \textit(randomized search) algorithms. In these algorithms several random initial positions and rotations of the pair protein are generated. Then, binding energy minimization algorithm using the Monte Carlo search is run to find the optimal binding conformation of the two proteins. This is often done in two stages. In the first run simplified protein models are used. The results are then refined in the second run using full atomistic protein model. Among the tools using this approach bellong for example RosettaDock \cite{gray2003protein} or HADDOCK \cite{dominguez2003haddock, de2010haddock}. The latter one of the named enables to incorporate biochemical or biophysical interaction information gained from nuclear magnetic resonance (NMR) titration experiments.
+
+We can also identify a group of \textit{post-docking} approaches. These do not include a full docking search algorithms, but rather refine the subset of best results of some of the previously mentioned approaches with more sophisticated scoring functions where protein flexibility and biological information can be incorporated. It should be noted that these subsets can still consist of hundreds or thousands of conformations. Among post-docking tools belong for example DECK~\cite{liu2011deck} or pyDock~\cite{cheng2007pydock, jimenez2013pydockweb}.
+
+All of the afore mentioned methods aim to predict the docking conformation of two proteins based on their geometrical and physico-chemical attributes. A completely different approach is so called \textit{template-based docking} \cite{szilagyi2014template}. In this approach known complex of two proteins serves as a template for the two proteins to be docked. The precondition here is that the complex proteins and the proteins to be docked have to be homologous, i.e. they have to share similar structure and properties. One of the most recent tools supporting template-based docking is SnapDock\cite{estrin2017snapdock}.
+
+\subsection{Visual Analysis of Protein-Protein Interactions}
+Unlike the literature concerning the visualization and analysis of molecular cavities, visualization literature directly targeting protein-protein interactions is sparse and the domain experts are largely relaying on basic molecular visualization as was described in Section \ref{Sec:PPIproblem}. The main problem when it comes to visual analysis of interacting complexes is occlusion -- the most interesting part of the proteins, their contact zone, is hidden. There are couple of approaches that try to overcome this problem.
+
+One of the earliest works in this area is a method for computation of intermolecular negative value by Lee and Warshney \cite{lee2006computing}. The idea behind this approach is that area between docked molecules is useful as a measure of the shape complementarity. In combination with dedicated visual representations it can serve as an interactive tool for studying possible docking conformations.
+
+Similarly, Ban et al. \cite{ban2006interface} proposed a method for Voronoi-based extraction of interface surface for protein complexes. In their work they also included surface hierarchy that distinguishes between core and peripheral regions of interaction zone. The interface surfaces can be also computed for multi-protein interactions.
+
+\begin{figure}[h]
+  \begin{center}
+  \subfigure[]{ 
+  \includegraphics[width=0.33\linewidth]{pictures/varshney1.png}
+   }     
+  \subfigure[]{\includegraphics[width=0.22\linewidth]{pictures/varshney2.png}}
+  \subfigure[]{\includegraphics[width=0.33\linewidth]{pictures/ban.png}}
+  \caption{Visual representations of the contact zones. (A) Intermolecular negative volume between molecules proposed by Lee and Varshney (B) Intermolecular volume only. (C) Interface surface proposed by Ban et al. Image taken from~\cite{lee2006computing} (A,B) and \cite{ban2006interface} (C).}
+  \label{Fig:pdbsum}  
+  \end{center}
+\end{figure}
+
+\begin{wrapfigure}{l}{0.4\textwidth}
+\vspace{-10pt}
+  \begin{center}
+  \includegraphics[width=\linewidth]{pictures/pdbsum2.pdf}
+  \caption{Abstracted visualization available in the PDBsum database -- list of all interacting amino acids along with individual interactions and their strength (shortened). Images adapted from the PDBsum database \cite{laskowski1997pdbsum}.}
+  \label{Fig:pdbsum}  
+  \end{center}
+\end{wrapfigure}
+
+Another way to deal with occluded contact zone was used in the work by Jin et al. \cite{jin2014targeting}. Here the open-book principle is applied, so the interacting proteins are rotated to orient the contact zones towards the camera.
+
+Another possibility to tackle the high visual complexity and oclusions of 3D view is usage of abstracted representations. Example of such as the schematic representation can be found in the PDBsum database \cite{laskowski1997pdbsum}. In an overview visualization each of the interacting proteins is represented by a sphere equipped with the information about the number of amino acids forming the contact zones and the number of different types of interactions in-between. Another detailed visualization lists all contact-zone amino acids. The interactions are visualized by lines -- the type and strength of the interactions is encoded in color and thickness of the lines (Figure \ref{Fig:pdbsum}).
+
+
+
+
+
+

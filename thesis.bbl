@@ -6,6 +6,17 @@ Jianghong An, Maxim Totrov, and Ruben Abagyan.
   ligand binding envelopes.
 \newblock {\em Molecular \& Cellular Proteomics}, 4(6):752--761, 2005.
 
+\bibitem{bajaj2011f}
+Chandrajit~L Bajaj, Rezaul Chowdhury, and Vinay Siddahanavalli.
+\newblock $ f2$ dock: Fast fourier protein-protein docking.
+\newblock {\em IEEE/ACM Transactions on Computational Biology and
+  Bioinformatics (TCBB)}, 8(1):45--58, 2011.
+
+\bibitem{ban2006interface}
+Yih-En~Andrew Ban, Herbert Edelsbrunner, and Johannes Rudolph.
+\newblock Interface surfaces for protein-protein complexes.
+\newblock {\em Journal of the ACM (JACM)}, 53(3):361--378, 2006.
+
 \bibitem{blinn1982generalization}
 James~F Blinn.
 \newblock A generalization of algebraic surface drawing.
@@ -33,6 +44,13 @@ Jan By{\v{s}}ka, Mathieu Le~Muzic, M~Eduard Gr{\"o}ller, Ivan Viola, and
   in molecular dynamics.
 \newblock {\em IEEE transactions on visualization and computer graphics},
   22(1):747--756, 2016.
+
+\bibitem{cheng2007pydock}
+Tammy Man-Kuang Cheng, Tom~L Blundell, and Juan Fernandez-Recio.
+\newblock pydock: Electrostatics and desolvation for effective scoring of
+  rigid-body protein--protein docking.
+\newblock {\em Proteins: Structure, Function, and Bioinformatics},
+  68(2):503--515, 2007.
 
 \bibitem{caver30}
 Eva Chovancova, Antonin Pavelka, Petr Benes, Ondrej Strnad, Jan Brezovsky,
@@ -76,6 +94,18 @@ John Dalton.
 \newblock {\em A new system of chemical philosophy}, volume~1.
 \newblock Cambridge University Press, 1808.
 
+\bibitem{de2010haddock}
+Sjoerd~J De~Vries, Marc Van~Dijk, and Alexandre~MJJ Bonvin.
+\newblock The haddock web server for data-driven biomolecular docking.
+\newblock {\em Nature protocols}, 5(5):883, 2010.
+
+\bibitem{dominguez2003haddock}
+Cyril Dominguez, Rolf Boelens, and Alexandre~MJJ Bonvin.
+\newblock Haddock: a protein- protein docking approach based on biochemical or
+  biophysical information.
+\newblock {\em Journal of the American Chemical Society}, 125(7):1731--1737,
+  2003.
+
 \bibitem{dreiding1959einfache}
 Andre~S Dreiding.
 \newblock Einfache molekularmodelle.
@@ -85,6 +115,18 @@ Andre~S Dreiding.
 Herbert Edelsbrunner.
 \newblock Deformable smooth surface design.
 \newblock {\em Discrete \& Computational Geometry}, 21(1):87--115, 1999.
+
+\bibitem{estrin2017snapdock}
+Michael Estrin and Haim~J Wolfson.
+\newblock Snapdock—template-based docking by geometric hashing.
+\newblock {\em Bioinformatics}, 33(14):i30--i36, 2017.
+
+\bibitem{gray2003protein}
+Jeffrey~J Gray, Stewart Moughon, Chu Wang, Ora Schueler-Furman, Brian Kuhlman,
+  Carol~A Rohl, and David Baker.
+\newblock Protein--protein docking with simultaneous optimization of rigid-body
+  displacement and side-chain conformations.
+\newblock {\em Journal of molecular biology}, 331(1):281--299, 2003.
 
 \bibitem{gumhold2003splatting}
 Stefan Gumhold.
@@ -128,6 +170,29 @@ Bosco~K. Ho and Franz Gruswitz.
 \newblock {HOLLOW}: Generating accurate representations of channel and interior
   surfaces in molecular structures.
 \newblock {\em BMC Structural Biology}, 8(1):49, 2008.
+
+\bibitem{huang2014search}
+Sheng-You Huang.
+\newblock Search strategies and evaluation in protein--protein docking:
+  principles, advances and challenges.
+\newblock {\em Drug discovery today}, 19(8):1081--1096, 2014.
+
+\bibitem{isralewitz2001steered}
+Barry Isralewitz, Mu~Gao, and Klaus Schulten.
+\newblock Steered molecular dynamics and mechanical functions of proteins.
+\newblock {\em Current opinion in structural biology}, 11(2):224--230, 2001.
+
+\bibitem{jimenez2013pydockweb}
+Brian Jim{\'e}nez-Garc{\'\i}a, Carles Pons, and Juan Fern{\'a}ndez-Recio.
+\newblock pydockweb: a web server for rigid-body protein--protein docking using
+  electrostatics and desolvation scoring.
+\newblock {\em Bioinformatics}, 29(13):1698--1699, 2013.
+
+\bibitem{jin2014targeting}
+Lingyan Jin, Weiru Wang, and Guowei Fang.
+\newblock Targeting protein-protein interaction by small molecules.
+\newblock {\em Annual review of pharmacology and toxicology}, 54:435--456,
+  2014.
 
 \bibitem{jurvcik2016accelerated}
 Adam Jurčík, Július Parulek, Jiří Sochor, and Barbora Kozlíkova.
@@ -182,6 +247,12 @@ Michael Krone, Sebastian Grottel, and Thomas Ertl.
 \newblock In {\em Biological Data Visualization (BioVis), 2011 IEEE Symposium
   on}, pages 17--22. IEEE, 2011.
 
+\bibitem{krone2014visual}
+Michael Krone, Daniel Kauker, Guido Reina, and Thomas Ertl.
+\newblock Visual analysis of dynamic protein cavities and binding sites.
+\newblock In {\em Visualization Symposium (PacificVis), 2014 IEEE Pacific},
+  pages 301--305. IEEE, 2014.
+
 \bibitem{krone2016visual}
 Michael Krone, Barbora Kozl{\'\i}kov{\'a}, Norbert Lindow, Marc Baaden, Daniel
   Baum, Julius Parulek, H-C Hege, and Ivan Viola.
@@ -214,6 +285,13 @@ Roman~A Laskowski.
   intermolecular interactions.
 \newblock {\em Journal of molecular graphics}, 13(5):323--330, 1995.
 
+\bibitem{laskowski1997pdbsum}
+Roman~A Laskowski, E~Gail Hutchinson, Alex~D Michie, Andrew~C Wallace, Martin~L
+  Jones, and Janet~M Thornton.
+\newblock Pdbsum: a web-based database of summaries and analyses of all pdb
+  structures.
+\newblock {\em Trends in biochemical sciences}, 22(12):488--490, 1997.
+
 \bibitem{laurie2005q}
 Alasdair~TR Laurie and Richard~M Jackson.
 \newblock Q-sitefinder: an energy-based method for the prediction of
@@ -237,6 +315,12 @@ Byungkook Lee and Frederic~M Richards.
 \newblock The interpretation of protein structures: estimation of static
   accessibility.
 \newblock {\em Journal of molecular biology}, 55(3):379IN3--400IN4, 1971.
+
+\bibitem{lee2006computing}
+Chang Lee and Amitabh Varshney.
+\newblock Computing and displaying intermolecular negative volume for docking.
+\newblock {\em Scientific Visualization: The Visual Extraction of Knowledge
+  from Data}, pages 49--64, 2006.
 
 \bibitem{levitt1992pocket}
 David~G Levitt and Leonard~J Banaszak.
@@ -286,6 +370,19 @@ Norbert Lindow, Daniel Baum, Steffen Prohaska, and Hans-Christian Hege.
 \newblock In {\em Computer Graphics Forum}, volume~29, pages 943--952. Wiley
   Online Library, 2010.
 
+\bibitem{liu2011deck}
+Shiyong Liu and Ilya~A Vakser.
+\newblock Deck: Distance and environment-dependent, coarse-grained,
+  knowledge-based potentials for protein-protein docking.
+\newblock {\em BMC bioinformatics}, 12(1):280, 2011.
+
+\bibitem{ludemann2000substrates}
+Susanna~K L{\"u}demann, Val{\`e}re Lounnas, and Rebecca~C Wade.
+\newblock How do substrates enter and products exit the buried active site of
+  cytochrome p450cam? 1. random expulsion molecular dynamics investigation of
+  ligand access channels and mechanisms.
+\newblock {\em Journal of molecular biology}, 303(5):797--811, 2000.
+
 \bibitem{masood2015chexvis}
 Talha~Bin Masood, Sankaran Sandhya, Nagasuma Chandra, and Vijay Natarajan.
 \newblock Chexvis: a tool for molecular channel extraction and visualization.
@@ -326,6 +423,11 @@ Julius Parulek, Cagatay Turkay, Nathalie Reuter, and Ivan Viola.
 \newblock In {\em Biological Data Visualization (BioVis), 2012 IEEE Symposium
   on}, pages 115--122. IEEE, 2012.
 
+\bibitem{parulek2013visual}
+Julius Parulek, Cagatay Turkay, Nathalie Reuter, and Ivan Viola.
+\newblock Visual cavity analysis in molecular simulations.
+\newblock {\em BMC bioinformatics}, 14(19):S4, 2013.
+
 \bibitem{patane2015state}
 Giuseppe Patan{\'e} and Michela Spagnuolo.
 \newblock State-of-the-art and perspectives of geometric and implicit modeling
@@ -352,6 +454,13 @@ Martin Pet{\v{r}}ek, Michal Otyepka, Pavel Ban{\'a}{\v{s}}, Pavl{\'\i}na
   cavities.
 \newblock {\em BMC bioinformatics}, 7(1):316, 2006.
 
+\bibitem{pons2012cell}
+Carles Pons, Daniel Jim{\'e}nez-Gonz{\'a}lez, Cecilia Gonz{\'a}lez-{\'A}lvarez,
+  Harald Servat, Daniel Cabrera-Ben{\'\i}tez, Xavier Aguilar, and Juan
+  Fern{\'a}ndez-Recio.
+\newblock Cell-dock: high-performance protein--protein docking.
+\newblock {\em Bioinformatics}, 28(18):2394--2396, 2012.
+
 \bibitem{postarnakevich2009global}
 Nicolay Postarnakevich and Rahul Singh.
 \newblock Global-to-local representation and visualization of molecular
@@ -377,6 +486,17 @@ Jane~S Richardson.
 \newblock The anatomy and taxonomy of protein structure.
 \newblock {\em Advances in protein chemistry}, 34:167--339, 1981.
 
+\bibitem{roberts2013dot2}
+Victoria~A Roberts, Elaine~E Thompson, Michael~E Pique, Martin~S Perez, and
+  LF~Ten~Eyck.
+\newblock Dot2: Macromolecular docking with improved biophysical models.
+\newblock {\em Journal of computational chemistry}, 34(20):1743--1758, 2013.
+
+\bibitem{schneidman2005patchdock}
+Dina Schneidman-Duhovny, Yuval Inbar, Ruth Nussinov, and Haim~J Wolfson.
+\newblock Patchdock and symmdock: servers for rigid and symmetric docking.
+\newblock {\em Nucleic acids research}, 33(suppl\_2):W363--W367, 2005.
+
 \bibitem{simoesgeometric}
 Tiago Sim{\~o}es, Daniel Lopes, S{\'e}rgio Dias, Francisco Fernandes, Jo{\~a}o
   Pereira, Joaquim Jorge, Chandrajit Bajaj, and Abel Gomes.
@@ -396,6 +516,11 @@ Ond{\v{r}}ej Strnad.
 \newblock {\em Algorithms for Detecting Pathways in Large Protein Structures
   and Their Ensembles}.
 \newblock PhD thesis, Masaryk University, Faculty of Informatics, 2014.
+
+\bibitem{szilagyi2014template}
+Andras Szilagyi and Yang Zhang.
+\newblock Template-based structure modeling of protein--protein interactions.
+\newblock {\em Current opinion in structural biology}, 24:10--23, 2014.
 
 \bibitem{totrov1996contour}
 Maxim Totrov and Ruben Abagyan.
