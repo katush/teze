@@ -11,45 +11,45 @@ Warning--can't use both volume and number fields in le2014illustrative
 Warning--can't use both volume and number fields in lindow2010accelerated
 Warning--empty year in simoesgeometric
 Warning--empty school in Waals1873PhDThesis
-You've used 93 entries,
+You've used 97 entries,
             2118 wiz_defined-function locations,
-            1031 strings with 22656 characters,
-and the built_in function-call counts, 37076 in all, are:
-= -- 3718
-> -- 1888
+            1052 strings with 23491 characters,
+and the built_in function-call counts, 38829 in all, are:
+= -- 3885
+> -- 2009
 < -- 30
-+ -- 752
-- -- 650
-* -- 2869
-:= -- 6031
-add.period$ -- 298
-call.type$ -- 93
-change.case$ -- 598
++ -- 800
+- -- 694
+* -- 3028
+:= -- 6335
+add.period$ -- 310
+call.type$ -- 97
+change.case$ -- 631
 chr.to.int$ -- 0
-cite$ -- 101
-duplicate$ -- 1282
-empty$ -- 2725
-format.name$ -- 650
-if$ -- 7715
+cite$ -- 105
+duplicate$ -- 1326
+empty$ -- 2832
+format.name$ -- 694
+if$ -- 8054
 int.to.chr$ -- 0
-int.to.str$ -- 93
-missing$ -- 90
-newline$ -- 466
-num.names$ -- 186
-pop$ -- 556
+int.to.str$ -- 97
+missing$ -- 94
+newline$ -- 486
+num.names$ -- 194
+pop$ -- 581
 preamble$ -- 1
-purify$ -- 508
+purify$ -- 537
 quote$ -- 0
-skip$ -- 920
+skip$ -- 949
 stack$ -- 0
-substring$ -- 2622
-swap$ -- 323
+substring$ -- 2742
+swap$ -- 327
 text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 370
+type$ -- 386
 warning$ -- 8
-while$ -- 369
-width$ -- 95
-write$ -- 1039
+while$ -- 385
+width$ -- 99
+write$ -- 1083
 (There were 8 warnings)
