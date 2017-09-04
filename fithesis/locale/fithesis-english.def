@@ -1,4 +1,4 @@
-%%
+﻿%%
 %% This is file `fithesis-english.def',
 %% generated with the docstrip utility.
 %%
@@ -80,6 +80,8 @@
     Doctoral Thesis%
   \else\ifx\thesis@type\thesis@rigorous%
     Rigorous Thesis%
+  \else\ifx\thesis@type\thesis@proposal%
+    PhD Thesis Proposal%
   \else%
     <<Unknown thesis type (\thesis@type)>>%
   \fi\fi\fi\fi}
